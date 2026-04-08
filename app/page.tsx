@@ -192,7 +192,7 @@ function SortIcon({ column, current, dir }: { column: SortKey; current: SortKey 
 function ProposalRow({ proposal }: { proposal: ProposedExperiment }) {
   const p = proposal;
   const [open, setOpen] = useState(false);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(p.defaultScore);
 
   return (
     <>
@@ -282,6 +282,7 @@ function AddExperimentForm({ onAdd }: { onAdd: (p: ProposedExperiment) => void }
       ctaTested: cta.trim(),
       durationWeeks: weeks,
       successCriteria: criteria.trim(),
+      defaultScore: 0,
     });
     setName("");
     setChannel("");

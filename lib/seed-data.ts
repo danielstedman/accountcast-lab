@@ -240,18 +240,7 @@ export const PROPOSED_EXPERIMENTS: ProposedExperiment[] = [
     durationWeeks: 2,
     successCriteria:
       "15%+ reply rate on Lemlist (vs. current 0%) and 50%+ of TAL recipients request a follow-up call.",
-  },
-  {
-    id: "prop-002",
-    name: "CTV Creative Audit Offer",
-    channel: "Lemlist",
-    motion: "sales",
-    hypothesis:
-      "Brands already running CTV will engage with a free audit that shows gaps in their B2B targeting — positions AccountCast as the expert.",
-    ctaTested: "Free CTV creative audit",
-    durationWeeks: 2,
-    successCriteria:
-      "10%+ reply rate and 3+ audits delivered in 2 weeks.",
+    defaultScore: 5,
   },
   {
     id: "prop-003",
@@ -264,18 +253,20 @@ export const PROPOSED_EXPERIMENTS: ProposedExperiment[] = [
     durationWeeks: 4,
     successCriteria:
       "At least 1 CTA click per 100 visitors (1% CTR) — vs. current 0%.",
+    defaultScore: 4,
   },
   {
-    id: "prop-004",
-    name: "LinkedIn Ads — Awareness Campaign",
-    channel: "LinkedIn",
-    motion: "marketing",
+    id: "prop-002",
+    name: "CTV Creative Audit Offer",
+    channel: "Lemlist",
+    motion: "sales",
     hypothesis:
-      "Targeted LinkedIn ads to VP/Director Demand Gen will drive awareness and website visits, complementing the outbound motion.",
-    ctaTested: "Schedule a demo",
-    durationWeeks: 4,
+      "Brands already running CTV will engage with a free audit that shows gaps in their B2B targeting — positions AccountCast as the expert.",
+    ctaTested: "Free CTV creative audit",
+    durationWeeks: 2,
     successCriteria:
-      "CTR above 0.5%, at least 50 website visits from ads, 1+ demo request.",
+      "10%+ reply rate and 3+ audits delivered in 2 weeks.",
+    defaultScore: 3,
   },
   {
     id: "prop-005",
@@ -288,5 +279,19 @@ export const PROPOSED_EXPERIMENTS: ProposedExperiment[] = [
     durationWeeks: 3,
     successCriteria:
       "Combined reply rate 15%+ (vs. ~7% LinkedIn-only and 0% email-only).",
+    defaultScore: 2,
+  },
+  {
+    id: "prop-004",
+    name: "LinkedIn Ads — Awareness Campaign",
+    channel: "LinkedIn",
+    motion: "marketing",
+    hypothesis:
+      "Targeted LinkedIn ads to VP/Director Demand Gen will drive awareness and website visits, complementing the outbound motion.",
+    ctaTested: "Schedule a demo",
+    durationWeeks: 4,
+    successCriteria:
+      "CTR above 0.5%, at least 50 website visits from ads, 1+ demo request.",
+    defaultScore: 1,
   },
 ];

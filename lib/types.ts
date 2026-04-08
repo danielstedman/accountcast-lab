@@ -17,6 +17,7 @@ export interface ProposedExperiment {
   ctaTested: string;
   durationWeeks: number;
   successCriteria: string;
+  defaultScore: number;
 }
 
 export interface Campaign {
