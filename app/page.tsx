@@ -220,7 +220,7 @@ function ProposalRow({ proposal, onDateChange }: { proposal: ProposedExperiment;
             <div className="font-medium text-sm text-foreground">{p.name}</div>
             <MotionBadge motion={p.motion} />
           </div>
-          <div className="text-xs text-muted">{p.channel} \u00B7 {p.durationWeeks} week{p.durationWeeks > 1 ? "s" : ""}</div>
+          <div className="text-xs text-muted">{p.channel} {"\u00B7"} {p.durationWeeks} week{p.durationWeeks > 1 ? "s" : ""}</div>
         </td>
         <td className="py-3 pr-4 text-sm text-muted cursor-pointer hidden lg:table-cell" colSpan={2} onClick={() => setOpen(!open)}>
           {p.ctaTested}
