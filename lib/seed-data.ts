@@ -14,8 +14,8 @@ export const CAMPAIGNS: Campaign[] = [
     replies: 29,
     conversion: "7.5%",
     meetings: 0,
-    pmfScore: 23,
-    pmfNote: "29 of 126 who accepted replied (23%). No meetings booked yet — replies haven't converted to pipeline.",
+    pmfScore: 15,
+    pmfNote: "Replies but no meetings. Interest is there but hasn't converted to real pipeline yet.",
     confidence: "medium",
     confidenceNote: "Accept/reply counts are tracked. Reply sentiment is not — requires manual review.",
     details: [
@@ -41,8 +41,8 @@ export const CAMPAIGNS: Campaign[] = [
     replies: 2,
     conversion: "1.6%",
     meetings: 0,
-    pmfScore: 7,
-    pmfNote: "2 of 27 who accepted replied (7%). Too early and too few replies to draw conclusions.",
+    pmfScore: 5,
+    pmfNote: "2 replies, no meetings. Too early to tell.",
     confidence: "medium",
     confidenceNote: "Accept/reply counts are tracked. Small sample size limits insight.",
     details: [
@@ -213,8 +213,8 @@ export const CAMPAIGNS: Campaign[] = [
     replies: 30,
     conversion: "15%",
     meetings: 4,
-    pmfScore: 13,
-    pmfNote: "30 replies from ~200 emails, 4 became meetings (13%). Warm network, estimated numbers.",
+    pmfScore: 75,
+    pmfNote: "4 meetings, all became qualified leads. Deals in progress. Strongest PMF signal — close to 80% target if a deal closes.",
     confidence: "low",
     confidenceNote: "Numbers are estimated by Danny — not from a tracked system. Small sample, warm network.",
     details: [
