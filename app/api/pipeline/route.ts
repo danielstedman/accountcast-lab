@@ -35,43 +35,25 @@ export async function GET() {
   }
 
   // Fetch all deals from AccountCast pipeline
+  const url = `${BASE_URL}/pipelines/${ACCOUNTCAST_PIPELINE_ID}/deals?api_token=${token}&limit=500`;
+  const res = await fetch(url, { cache: "no-store" });
+  const json = await res.json();
+
   const allDeals: Deal[] = [];
-  let start = 0;
 
-  while (true) {
-    const params = new URLSearchParams({
-      api_token: token,
-      start: String(start),
-      limit: "100",
-    });
-
-    const res = await fetch(
-      `${BASE_URL}/pipelines/${ACCOUNTCAST_PIPELINE_ID}/deals?${params}`,
-      { cache: "no-store" }
-    );
-
-    if (!res.ok) break;
-    const json = await res.json();
-    if (!json.success) break;
-
-    if (json.data) {
-      for (const d of json.data) {
-        allDeals.push({
-          id: d.id,
-          title: d.title,
-          value: d.value || 0,
-          currency: d.currency || "USD",
-          stage_id: d.stage_id,
-          stage: STAGE_NAMES[d.stage_id] || `Stage ${d.stage_id}`,
-          status: d.status,
-          org_name: d.org_name || null,
-        });
-      }
+  if (json.success && json.data) {
+    for (const d of json.data) {
+      allDeals.push({
+        id: d.id,
+        title: d.title,
+        value: d.value || 0,
+        currency: d.currency || "USD",
+        stage_id: d.stage_id,
+        stage: STAGE_NAMES[d.stage_id] || `Stage ${d.stage_id}`,
+        status: d.status,
+        org_name: d.org_name || null,
+      });
     }
-
-    if (json.additional_data?.pagination?.more_items_in_collection) {
-      start = json.additional_data.pagination.next_start;
-    } else break;
   }
 
   const openDeals = allDeals.filter((d) => d.status === "open");
@@ -101,13 +83,5 @@ export async function GET() {
     totalDeals: allDeals.length,
     totalValue: allDeals.reduce((sum, d) => sum + d.value, 0),
     stages,
-    debug: {
-      fetchedCount: allDeals.length,
-      tokenPrefix: token.substring(0, 4),
-      rawTest: await fetch(
-        `${BASE_URL}/pipelines/${ACCOUNTCAST_PIPELINE_ID}/deals?api_token=${token}&limit=5`,
-        { cache: "no-store" }
-      ).then(r => r.json()).catch(e => ({ error: String(e) })),
-    },
   });
 }
