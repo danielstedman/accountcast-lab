@@ -18,6 +18,8 @@ export interface ProposedExperiment {
   durationWeeks: number;
   successCriteria: string;
   defaultScore: number;
+  startDate: string;
+}
 }
 
 export interface Campaign {

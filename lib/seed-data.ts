@@ -241,6 +241,7 @@ export const PROPOSED_EXPERIMENTS: ProposedExperiment[] = [
     successCriteria:
       "15%+ reply rate on Lemlist (vs. current 0%) and 50%+ of TAL recipients request a follow-up call.",
     defaultScore: 5,
+    startDate: "",
   },
   {
     id: "prop-003",
@@ -254,6 +255,7 @@ export const PROPOSED_EXPERIMENTS: ProposedExperiment[] = [
     successCriteria:
       "At least 1 CTA click per 100 visitors (1% CTR) — vs. current 0%.",
     defaultScore: 4,
+    startDate: "",
   },
   {
     id: "prop-002",
@@ -267,6 +269,7 @@ export const PROPOSED_EXPERIMENTS: ProposedExperiment[] = [
     successCriteria:
       "10%+ reply rate and 3+ audits delivered in 2 weeks.",
     defaultScore: 3,
+    startDate: "",
   },
   {
     id: "prop-005",
@@ -280,6 +283,7 @@ export const PROPOSED_EXPERIMENTS: ProposedExperiment[] = [
     successCriteria:
       "Combined reply rate 15%+ (vs. ~7% LinkedIn-only and 0% email-only).",
     defaultScore: 2,
+    startDate: "",
   },
   {
     id: "prop-004",
@@ -293,5 +297,6 @@ export const PROPOSED_EXPERIMENTS: ProposedExperiment[] = [
     successCriteria:
       "CTR above 0.5%, at least 50 website visits from ads, 1+ demo request.",
     defaultScore: 1,
+    startDate: "",
   },
 ];

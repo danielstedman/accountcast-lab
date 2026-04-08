@@ -189,7 +189,7 @@ function SortIcon({ column, current, dir }: { column: SortKey; current: SortKey 
   return <span className="text-accent ml-1">{dir === "asc" ? "\u2191" : "\u2193"}</span>;
 }
 
-function ProposalRow({ proposal }: { proposal: ProposedExperiment }) {
+function ProposalRow({ proposal, onDateChange }: { proposal: ProposedExperiment; onDateChange: (id: string, date: string) => void }) {
   const p = proposal;
   const [open, setOpen] = useState(false);
   const [score, setScore] = useState(p.defaultScore);
@@ -212,8 +212,15 @@ function ProposalRow({ proposal }: { proposal: ProposedExperiment }) {
         <td className="py-3 pr-4 text-sm text-muted cursor-pointer hidden lg:table-cell" colSpan={2} onClick={() => setOpen(!open)}>
           {p.ctaTested}
         </td>
-        <td className="py-3 pr-4 text-sm text-muted cursor-pointer hidden lg:table-cell" colSpan={3} onClick={() => setOpen(!open)}>
-          {p.successCriteria}
+        <td className="py-3 pr-4 hidden lg:table-cell" colSpan={2}>
+          <input
+            type="date"
+            value={p.startDate}
+            onChange={(e) => onDateChange(p.id, e.target.value)}
+            className={`text-sm border border-border rounded-md px-2 py-1 bg-white cursor-pointer ${
+              p.startDate ? "text-foreground" : "text-zinc-400"
+            }`}
+          />
         </td>
         <td className="py-3 pr-4">
           <div className="flex items-center gap-1">
@@ -283,6 +290,7 @@ function AddExperimentForm({ onAdd }: { onAdd: (p: ProposedExperiment) => void }
       durationWeeks: weeks,
       successCriteria: criteria.trim(),
       defaultScore: 0,
+      startDate: "",
     });
     setName("");
     setChannel("");
@@ -626,13 +634,21 @@ export default function Home() {
                   <th className="w-8 py-2.5 px-4"></th>
                   <th className="py-2.5 pr-4 text-left font-medium">Experiment</th>
                   <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell" colSpan={2}>CTA to test</th>
-                  <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell" colSpan={3}>Success criteria</th>
+                  <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell" colSpan={2}>Start date</th>
                   <th className="py-2.5 pr-4 text-center font-medium">Vote</th>
                 </tr>
               </thead>
               <tbody>
                 {proposals.map((p) => (
-                  <ProposalRow key={p.id} proposal={p} />
+                  <ProposalRow
+                    key={p.id}
+                    proposal={p}
+                    onDateChange={(id, date) =>
+                      setProposals((prev) =>
+                        prev.map((x) => (x.id === id ? { ...x, startDate: date } : x))
+                      )
+                    }
+                  />
                 ))}
               </tbody>
             </table>
