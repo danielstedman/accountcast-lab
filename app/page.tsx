@@ -27,7 +27,8 @@ function repliesSortVal(v: number | "n/a" | null): number {
   return v;
 }
 
-function num(v: number | null) {
+function num(v: number | "n/a" | null) {
+  if (v === "n/a") return <span className="text-zinc-400 text-xs">N/A</span>;
   if (v === null) return <span className="text-zinc-300">{"\u2014"}</span>;
   return v.toLocaleString();
 }
@@ -267,6 +268,9 @@ export default function Home() {
       } else if (sortKey === "conversion") {
         aVal = parsePercent(a.conversion);
         bVal = parsePercent(b.conversion);
+      } else if (sortKey === "targeted") {
+        aVal = typeof a.targeted === "number" ? a.targeted : -1;
+        bVal = typeof b.targeted === "number" ? b.targeted : -1;
       } else {
         aVal = a[sortKey] ?? -1;
         bVal = b[sortKey] ?? -1;
@@ -354,7 +358,7 @@ export default function Home() {
               <div className="border border-border rounded-lg px-4 py-3">
                 <div className="text-xs text-muted uppercase tracking-wide">Total targeted</div>
                 <div className="text-2xl font-bold font-mono mt-0.5">
-                  {CAMPAIGNS.reduce((a, c) => a + (c.targeted || 0), 0).toLocaleString()}
+                  {CAMPAIGNS.reduce((a, c) => a + (typeof c.targeted === "number" ? c.targeted : 0), 0).toLocaleString()}
                 </div>
                 <div className="text-xs text-muted">across all channels</div>
               </div>

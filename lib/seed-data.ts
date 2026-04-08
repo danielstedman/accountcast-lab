@@ -178,7 +178,7 @@ export const CAMPAIGNS: Campaign[] = [
     motion: "product",
     status: "active",
     dateRange: "Feb 2026 – present",
-    targeted: 811,
+    targeted: "n/a",
     reached: 541,
     replies: "n/a",
     conversion: "0%",

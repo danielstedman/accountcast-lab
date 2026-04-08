@@ -28,7 +28,7 @@ export interface Campaign {
   status: Status;
   dateRange: string;
   // Unified top-level metrics
-  targeted: number | null;    // people we aimed at (sends, requests, impressions, visitors)
+  targeted: number | "n/a" | null; // people we aimed at, or n/a for inbound channels
   reached: number | null;     // people who engaged (opens, accepts, page views)
   replies: number | "n/a" | null; // replies (email/LinkedIn) or n/a if not applicable
   conversion: string | null;  // conversion rate (e.g. CTA click rate, reply-to-meeting rate)
