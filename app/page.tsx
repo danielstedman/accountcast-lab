@@ -427,6 +427,7 @@ export default function Home() {
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [proposals, setProposals] = useState(PROPOSED_EXPERIMENTS);
   const [pipeline, setPipeline] = useState<PipelineData | null>(null);
+  const [defsOpen, setDefsOpen] = useState(false);
 
   useEffect(() => {
     fetch("/api/pipeline")
@@ -663,28 +664,39 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Definitions */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-4 mb-6">
-            <div className="border border-border rounded-lg px-4 py-3">
-              <div className="text-sm font-semibold text-foreground mb-1">Product-Market Fit (PMF)</div>
-              <p className="text-xs text-muted">
-                The point where your product clicks with a market. We measure it as: of people who experience the
-                {" "}<span className="font-medium text-foreground">magic moment</span>, what % take the next step? Target: 80%.
-              </p>
-            </div>
-            <div className="border border-border rounded-lg px-4 py-3">
-              <div className="text-sm font-semibold text-foreground mb-1">The Magic Moment</div>
-              <p className="text-xs text-muted">
-                For AccountCast, this is the <span className="font-medium text-foreground">{"\u201C"}at last{"\u201D"} reaction</span> {"\u2014"} when
-                a B2B marketer realizes they can finally use the power of television with the precision of account-based targeting.
-              </p>
-            </div>
-            <div className="border border-border rounded-lg px-4 py-3">
-              <div className="text-sm font-semibold text-foreground mb-1">How We Experiment</div>
-              <p className="text-xs text-muted">
-                Each experiment tests one hypothesis: can we deliver the magic moment through a specific channel and
-                convert it with a specific CTA? Run fast, measure everything, kill what doesn{"\u2019"}t work.
-              </p>
+          {/* Definitions — collapsible on mobile, always visible on desktop */}
+          <div className="mb-6">
+            <button
+              onClick={() => setDefsOpen(!defsOpen)}
+              className="flex items-center gap-2 text-sm font-medium text-muted hover:text-foreground transition-colors lg:hidden mb-2"
+            >
+              <span>{defsOpen ? "\u25BE" : "\u25B8"}</span>
+              What is PMF? How do we measure it?
+            </button>
+            <div className={`${defsOpen ? "block" : "hidden"} lg:block`}>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-4">
+                <div className="border border-border rounded-lg px-4 py-3">
+                  <div className="text-sm font-semibold text-foreground mb-1">Product-Market Fit (PMF)</div>
+                  <p className="text-xs text-muted">
+                    The point where your product clicks with a market. We measure it as: of people who experience the
+                    {" "}<span className="font-medium text-foreground">magic moment</span>, what % take the next step? Target: 80%.
+                  </p>
+                </div>
+                <div className="border border-border rounded-lg px-4 py-3">
+                  <div className="text-sm font-semibold text-foreground mb-1">The Magic Moment</div>
+                  <p className="text-xs text-muted">
+                    For AccountCast, this is the <span className="font-medium text-foreground">{"\u201C"}at last{"\u201D"} reaction</span> {"\u2014"} when
+                    a B2B marketer realizes they can finally use the power of television with the precision of account-based targeting.
+                  </p>
+                </div>
+                <div className="border border-border rounded-lg px-4 py-3">
+                  <div className="text-sm font-semibold text-foreground mb-1">How We Experiment</div>
+                  <p className="text-xs text-muted">
+                    Each experiment tests one hypothesis: can we deliver the magic moment through a specific channel and
+                    convert it with a specific CTA? Run fast, measure everything, kill what doesn{"\u2019"}t work.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
