@@ -83,6 +83,20 @@ export async function GET() {
     return NextResponse.json({ error: "No API token configured" }, { status: 500 });
   }
 
+  // Debug: test raw Pipedrive response
+  const testUrl = `${BASE_URL}/pipelines/${ACCOUNTCAST_PIPELINE_ID}/deals?api_token=${token}&status=open&limit=10`;
+  const testRes = await fetch(testUrl, { cache: "no-store" });
+  const testJson = await testRes.json();
+
+  if (!testJson.success || !testJson.data) {
+    return NextResponse.json({
+      error: "Pipedrive API failed",
+      status: testRes.status,
+      response: testJson,
+      tokenPrefix: token.substring(0, 6),
+    }, { status: 502 });
+  }
+
   const [openDeals, wonDeals] = await Promise.all([
     fetchDeals(token, "open"),
     fetchDeals(token, "won"),
