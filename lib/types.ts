@@ -20,7 +20,6 @@ export interface ProposedExperiment {
   defaultScore: number;
   startDate: string;
 }
-}
 
 export interface Campaign {
   id: string;
