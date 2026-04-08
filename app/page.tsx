@@ -192,28 +192,49 @@ function SortIcon({ column, current, dir }: { column: SortKey; current: SortKey 
 function ProposalRow({ proposal }: { proposal: ProposedExperiment }) {
   const p = proposal;
   const [open, setOpen] = useState(false);
+  const [up, setUp] = useState(0);
+  const [down, setDown] = useState(0);
 
   return (
     <>
       <tr
-        onClick={() => setOpen(!open)}
-        className={`border-b border-border hover:bg-zinc-50 cursor-pointer transition-colors ${open ? "bg-zinc-50" : ""}`}
+        className={`border-b border-border hover:bg-zinc-50 transition-colors ${open ? "bg-zinc-50" : ""}`}
       >
-        <td className="py-3 px-4">
+        <td className="py-3 px-4 cursor-pointer" onClick={() => setOpen(!open)}>
           <span className="text-zinc-400 text-sm">{open ? "\u25BE" : "\u25B8"}</span>
         </td>
-        <td className="py-3 pr-4">
+        <td className="py-3 pr-4 cursor-pointer" onClick={() => setOpen(!open)}>
           <div className="flex items-center gap-2">
             <div className="font-medium text-sm text-foreground">{p.name}</div>
             <MotionBadge motion={p.motion} />
           </div>
           <div className="text-xs text-muted">{p.channel} \u00B7 {p.durationWeeks} week{p.durationWeeks > 1 ? "s" : ""}</div>
         </td>
-        <td className="py-3 pr-4 text-sm text-muted" colSpan={2}>
+        <td className="py-3 pr-4 text-sm text-muted cursor-pointer" colSpan={2} onClick={() => setOpen(!open)}>
           {p.ctaTested}
         </td>
-        <td className="py-3 pr-4 text-sm text-muted" colSpan={4}>
+        <td className="py-3 pr-4 text-sm text-muted cursor-pointer" colSpan={3} onClick={() => setOpen(!open)}>
           {p.successCriteria}
+        </td>
+        <td className="py-3 pr-4">
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setUp(up + 1)}
+              className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-emerald-50 transition-colors text-sm"
+              title="Vote up"
+            >
+              <span>{"\uD83D\uDC4D"}</span>
+              {up > 0 && <span className="text-xs font-mono text-emerald-600">{up}</span>}
+            </button>
+            <button
+              onClick={() => setDown(down + 1)}
+              className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-red-50 transition-colors text-sm"
+              title="Vote down"
+            >
+              <span>{"\uD83D\uDC4E"}</span>
+              {down > 0 && <span className="text-xs font-mono text-red-500">{down}</span>}
+            </button>
+          </div>
         </td>
       </tr>
       {open && (
@@ -335,7 +356,7 @@ export default function Home() {
                 : "text-muted hover:text-foreground"
             }`}
           >
-            Lab
+            Proposed PMF Experiments
             <span className="ml-1.5 text-xs bg-zinc-100 text-muted px-1.5 py-0.5 rounded-full">
               {PROPOSED_EXPERIMENTS.length}
             </span>
@@ -425,9 +446,9 @@ export default function Home() {
       {tab === "lab" && (
         <div className="max-w-6xl mx-auto px-6 py-6 pb-12">
           <div className="mb-6">
-            <h2 className="text-lg font-semibold text-foreground">Experiment Lab</h2>
+            <h2 className="text-lg font-semibold text-foreground">Proposed PMF Experiments</h2>
             <p className="text-sm text-muted mt-1">
-              Proposed experiments to test. Activate one to move it to the Dashboard and start measuring PMF.
+              Vote on experiments to prioritize. Click any row to see the full hypothesis.
             </p>
           </div>
 
@@ -438,7 +459,8 @@ export default function Home() {
                   <th className="w-8 py-2.5 px-4"></th>
                   <th className="py-2.5 pr-4 text-left font-medium">Experiment</th>
                   <th className="py-2.5 pr-4 text-left font-medium" colSpan={2}>CTA to test</th>
-                  <th className="py-2.5 pr-4 text-left font-medium" colSpan={4}>Success criteria</th>
+                  <th className="py-2.5 pr-4 text-left font-medium" colSpan={3}>Success criteria</th>
+                  <th className="py-2.5 pr-4 text-center font-medium">Vote</th>
                 </tr>
               </thead>
               <tbody>
@@ -449,7 +471,7 @@ export default function Home() {
             </table>
           </div>
           <p className="text-xs text-zinc-400 mt-3">
-            Click any row to see the full hypothesis. Based on Danner{"'"}s PMF framework: find the magic, run 5 experiments/week, stay focused.
+            Click any row to expand. Based on Danner{"'"}s PMF framework: find the magic, run 5 experiments/week, stay focused.
           </p>
         </div>
       )}
