@@ -41,13 +41,20 @@ async function fetchDeals(token: string, status: string): Promise<Deal[]> {
       status,
     });
 
-    const res = await fetch(
-      `${BASE_URL}/pipelines/${ACCOUNTCAST_PIPELINE_ID}/deals?${params}`,
-      { cache: "no-store" }
-    );
+    const url = `${BASE_URL}/pipelines/${ACCOUNTCAST_PIPELINE_ID}/deals?${params}`;
+    const res = await fetch(url, { cache: "no-store" });
+
+    if (!res.ok) {
+      console.error(`Pipedrive API error: ${res.status} ${res.statusText}`);
+      break;
+    }
+
     const json = await res.json();
 
-    if (!json.success) break;
+    if (!json.success) {
+      console.error("Pipedrive API returned success=false", json);
+      break;
+    }
     if (json.data) {
       for (const d of json.data) {
         deals.push({
