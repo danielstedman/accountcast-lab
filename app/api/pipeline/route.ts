@@ -101,6 +101,13 @@ export async function GET() {
     totalDeals: allDeals.length,
     totalValue: allDeals.reduce((sum, d) => sum + d.value, 0),
     stages,
-    debug: { fetchedCount: allDeals.length, tokenPrefix: token.substring(0, 4) },
+    debug: {
+      fetchedCount: allDeals.length,
+      tokenPrefix: token.substring(0, 4),
+      rawTest: await fetch(
+        `${BASE_URL}/pipelines/${ACCOUNTCAST_PIPELINE_ID}/deals?api_token=${token}&limit=5`,
+        { cache: "no-store" }
+      ).then(r => r.json()).catch(e => ({ error: String(e) })),
+    },
   });
 }
