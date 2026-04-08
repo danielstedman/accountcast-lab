@@ -578,7 +578,7 @@ export default function Home() {
               </table>
             </div>
             <p className="text-xs text-zinc-400 mt-3">
-              Click column headers to sort. Click any row to expand details. PMF target is 80% (Danner framework).
+              Click column headers to sort. Click any row to expand details. PMF target is 80%.
             </p>
           </div>
         </>
@@ -591,6 +591,31 @@ export default function Home() {
             <p className="text-sm text-muted mt-1">
               Vote on experiments to prioritize. Click any row to see the full hypothesis.
             </p>
+          </div>
+
+          {/* Definitions */}
+          <div className="grid grid-cols-3 gap-4 mb-6">
+            <div className="border border-border rounded-lg px-4 py-3">
+              <div className="text-sm font-semibold text-foreground mb-1">Product-Market Fit (PMF)</div>
+              <p className="text-xs text-muted">
+                The point where your product clicks with a market. We measure it as: of people who experience the
+                {" "}<span className="font-medium text-foreground">magic moment</span>, what % take the next step? Target: 80%.
+              </p>
+            </div>
+            <div className="border border-border rounded-lg px-4 py-3">
+              <div className="text-sm font-semibold text-foreground mb-1">The Magic Moment</div>
+              <p className="text-xs text-muted">
+                For AccountCast, this is the <span className="font-medium text-foreground">{"\u201C"}at last{"\u201D"} reaction</span> {"\u2014"} when
+                a B2B marketer realizes they can finally use the power of television with the precision of account-based targeting.
+              </p>
+            </div>
+            <div className="border border-border rounded-lg px-4 py-3">
+              <div className="text-sm font-semibold text-foreground mb-1">How We Experiment</div>
+              <p className="text-xs text-muted">
+                Each experiment tests one hypothesis: can we deliver the magic moment through a specific channel and
+                convert it with a specific CTA? Run fast, measure everything, kill what doesn{"\u2019"}t work.
+              </p>
+            </div>
           </div>
 
           <div className="border border-border rounded-xl overflow-hidden">
@@ -612,7 +637,7 @@ export default function Home() {
             </table>
           </div>
           <p className="text-xs text-zinc-400 mt-3">
-            Click any row to expand. Based on Danner{"'"}s PMF framework: find the magic, run 5 experiments/week, stay focused.
+            Click any row to expand. Run experiments fast, measure PMF, double down on what works.
           </p>
 
           <AddExperimentForm onAdd={(p) => setProposals((prev) => [...prev, p])} />

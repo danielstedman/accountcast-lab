@@ -213,8 +213,8 @@ export const CAMPAIGNS: Campaign[] = [
     replies: 30,
     conversion: "15%",
     meetings: 4,
-    pmfScore: 100,
-    pmfNote: "4/4 meetings became qualified leads (100%). 30 replies from ~200 emails (15% reply rate). Strongest signal but estimated numbers.",
+    pmfScore: 13,
+    pmfNote: "30 replies from ~200 emails, 4 became meetings (13%). Warm network, estimated numbers.",
     confidence: "low",
     confidenceNote: "Numbers are estimated by Danny — not from a tracked system. Small sample, warm network.",
     details: [
