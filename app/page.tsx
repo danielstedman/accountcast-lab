@@ -484,7 +484,7 @@ export default function Home() {
     { key: "conversion", label: "Conversion", align: "text-right", hideOnMobile: true },
     { key: "meetings", label: "Meetings", align: "text-right", hideOnMobile: true },
     { key: "pmfScore", label: "PMF", align: "text-center" },
-    { key: "confidence", label: "Confidence", align: "text-left" },
+    { key: "confidence", label: "Data Quality", align: "text-left" },
   ];
 
   return (

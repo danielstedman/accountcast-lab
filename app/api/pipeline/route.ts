@@ -4,22 +4,17 @@ const API_TOKEN = process.env.PIPEDRIVE_API_TOKEN;
 const BASE_URL = "https://api.pipedrive.com/v1";
 const ACCOUNTCAST_PIPELINE_ID = 5;
 
-// All stages for lookup
-const ALL_STAGES: Record<number, string> = {
-  26: "Prospecting",
-  27: "Contacted",
-  28: "Engaged",
-  29: "Discovery Scheduled",
-  30: "Discovery Completed",
-  31: "Proposal",
-  32: "Negotiation",
+// Current AccountCast pipeline stages (updated Apr 8 2026)
+const STAGE_NAMES: Record<number, string> = {
+  26: "Qualification",
+  28: "Proposal/Scope",
+  31: "Negotiation",
 };
 
-// Stages to display — map multiple Pipedrive stages into summary buckets
 const DISPLAY_BUCKETS: { name: string; stageIds: number[] }[] = [
-  { name: "Qualified", stageIds: [26, 27, 28, 29, 30] },
-  { name: "Proposal", stageIds: [31] },
-  { name: "Negotiation", stageIds: [32] },
+  { name: "Qualification", stageIds: [26] },
+  { name: "Proposal/Scope", stageIds: [28] },
+  { name: "Negotiation", stageIds: [31] },
 ];
 
 interface Deal {
@@ -61,7 +56,7 @@ async function fetchDeals(status: string): Promise<Deal[]> {
           value: d.value || 0,
           currency: d.currency || "USD",
           stage_id: d.stage_id,
-          stage: ALL_STAGES[d.stage_id] || `Stage ${d.stage_id}`,
+          stage: STAGE_NAMES[d.stage_id] || `Stage ${d.stage_id}`,
           status: d.status,
           org_name: d.org_name || null,
         });
