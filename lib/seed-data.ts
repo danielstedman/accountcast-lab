@@ -267,17 +267,73 @@ export const PROPOSED_EXPERIMENTS: ProposedExperiment[] = [
     startDate: "",
   },
   {
-    id: "prop-003",
-    name: "Homepage CTA Split Test",
+    id: "prop-003a",
+    name: "Homepage CTA — 60s Demo Video",
     channel: "accountcast.tv",
     motion: "product",
     hypothesis:
-      "Replacing 'Talk to Sales' with '$2,000 credit towards your first campaign' will convert more visitors because it reduces perceived risk.",
-    ctaTested: "$2,000 credit towards your first qualified campaign",
+      "Replacing 'Talk to Sales' with 'See a 60-second demo' removes all commitment. Prospects can experience the magic moment without talking to anyone.",
+    ctaTested: "See a 60-second demo",
+    durationWeeks: 2,
+    successCriteria:
+      "1%+ CTA click rate (vs. current 0%). 50%+ video completion.",
+    defaultScore: 0,
+    startDate: "",
+  },
+  {
+    id: "prop-003b",
+    name: "Homepage CTA — Free TAL Builder",
+    channel: "accountcast.tv",
+    motion: "product",
+    hypothesis:
+      "Offering a free Target Account List gives immediate value. Prospects see their accounts with intent data and realize the product is real.",
+    ctaTested: "Build your free Target Account List",
+    durationWeeks: 2,
+    successCriteria:
+      "1%+ CTA click rate. 10+ TALs built in first 2 weeks.",
+    defaultScore: 0,
+    startDate: "",
+  },
+  {
+    id: "prop-003c",
+    name: "Homepage CTA — $2K Credit",
+    channel: "accountcast.tv",
+    motion: "product",
+    hypothesis:
+      "A $2,000 campaign credit reduces perceived risk. Prospects feel like they're getting something instead of being sold to.",
+    ctaTested: "Get $2,000 towards your first campaign",
     durationWeeks: 4,
     successCriteria:
-      "At least 1 CTA click per 100 visitors (1% CTR) — vs. current 0%.",
-    defaultScore: 4,
+      "1%+ CTA click rate (vs. current 0%).",
+    defaultScore: 0,
+    startDate: "",
+  },
+  {
+    id: "prop-003d",
+    name: "Homepage CTA — In-Market Accounts",
+    channel: "accountcast.tv",
+    motion: "product",
+    hypothesis:
+      "Curiosity-driven CTA using intent data. 'Which of your accounts are in-market right now?' is hard to ignore for any Demand Gen leader.",
+    ctaTested: "See which of your accounts are in-market",
+    durationWeeks: 2,
+    successCriteria:
+      "1%+ CTA click rate. Higher engagement time on page.",
+    defaultScore: 0,
+    startDate: "",
+  },
+  {
+    id: "prop-003e",
+    name: "Homepage CTA — Free CTV Audit",
+    channel: "accountcast.tv",
+    motion: "product",
+    hypothesis:
+      "For brands already running CTV, a free audit positions AccountCast as the expert and shows gaps in their current B2B targeting.",
+    ctaTested: "Get a free CTV creative audit",
+    durationWeeks: 2,
+    successCriteria:
+      "1%+ CTA click rate. 3+ audits requested in 2 weeks.",
+    defaultScore: 0,
     startDate: "",
   },
   {
