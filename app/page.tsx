@@ -192,8 +192,7 @@ function SortIcon({ column, current, dir }: { column: SortKey; current: SortKey 
 function ProposalRow({ proposal }: { proposal: ProposedExperiment }) {
   const p = proposal;
   const [open, setOpen] = useState(false);
-  const [up, setUp] = useState(0);
-  const [down, setDown] = useState(0);
+  const [score, setScore] = useState(0);
 
   return (
     <>
@@ -217,22 +216,25 @@ function ProposalRow({ proposal }: { proposal: ProposedExperiment }) {
           {p.successCriteria}
         </td>
         <td className="py-3 pr-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <button
-              onClick={() => setUp(up + 1)}
-              className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-emerald-50 transition-colors text-sm"
-              title="Vote up"
-            >
-              <span>{"\uD83D\uDC4D"}</span>
-              {up > 0 && <span className="text-xs font-mono text-emerald-600">{up}</span>}
-            </button>
-            <button
-              onClick={() => setDown(down + 1)}
-              className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-red-50 transition-colors text-sm"
+              onClick={() => setScore(score - 1)}
+              className="px-1.5 py-1 rounded hover:bg-red-50 transition-colors text-sm"
               title="Vote down"
             >
-              <span>{"\uD83D\uDC4E"}</span>
-              {down > 0 && <span className="text-xs font-mono text-red-500">{down}</span>}
+              {"\uD83D\uDC4E"}
+            </button>
+            <span className={`text-sm font-mono font-semibold min-w-[2ch] text-center ${
+              score > 0 ? "text-emerald-600" : score < 0 ? "text-red-500" : "text-zinc-400"
+            }`}>
+              {score > 0 ? `+${score}` : score}
+            </span>
+            <button
+              onClick={() => setScore(score + 1)}
+              className="px-1.5 py-1 rounded hover:bg-emerald-50 transition-colors text-sm"
+              title="Vote up"
+            >
+              {"\uD83D\uDC4D"}
             </button>
           </div>
         </td>
@@ -258,10 +260,149 @@ function ProposalRow({ proposal }: { proposal: ProposedExperiment }) {
   );
 }
 
+function AddExperimentForm({ onAdd }: { onAdd: (p: ProposedExperiment) => void }) {
+  const [open, setOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [channel, setChannel] = useState("");
+  const [motion, setMotion] = useState<Motion>("sales");
+  const [hypothesis, setHypothesis] = useState("");
+  const [cta, setCta] = useState("");
+  const [weeks, setWeeks] = useState(2);
+  const [criteria, setCriteria] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim()) return;
+    onAdd({
+      id: `prop-${Date.now()}`,
+      name: name.trim(),
+      channel: channel.trim() || "TBD",
+      motion,
+      hypothesis: hypothesis.trim(),
+      ctaTested: cta.trim(),
+      durationWeeks: weeks,
+      successCriteria: criteria.trim(),
+    });
+    setName("");
+    setChannel("");
+    setMotion("sales");
+    setHypothesis("");
+    setCta("");
+    setWeeks(2);
+    setCriteria("");
+    setOpen(false);
+  };
+
+  if (!open) {
+    return (
+      <button
+        onClick={() => setOpen(true)}
+        className="mt-4 px-4 py-2.5 text-sm font-medium text-accent border border-dashed border-accent/40 rounded-lg hover:bg-accent/5 transition-colors w-full"
+      >
+        + Add a new experiment idea
+      </button>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="mt-4 border border-border rounded-xl p-5 bg-zinc-50">
+      <h3 className="text-sm font-semibold text-foreground mb-3">New experiment idea</h3>
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label className="block text-xs text-muted mb-1">Name</label>
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full px-3 py-1.5 text-sm border border-border rounded-md bg-white"
+            placeholder="e.g. LinkedIn Ads — Retargeting"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-xs text-muted mb-1">Channel</label>
+          <input
+            value={channel}
+            onChange={(e) => setChannel(e.target.value)}
+            className="w-full px-3 py-1.5 text-sm border border-border rounded-md bg-white"
+            placeholder="e.g. Dripify, Lemlist, LinkedIn"
+          />
+        </div>
+        <div>
+          <label className="block text-xs text-muted mb-1">Motion</label>
+          <select
+            value={motion}
+            onChange={(e) => setMotion(e.target.value as Motion)}
+            className="w-full px-3 py-1.5 text-sm border border-border rounded-md bg-white"
+          >
+            <option value="sales">Sales-led</option>
+            <option value="marketing">Marketing-led</option>
+            <option value="product">Product-led</option>
+          </select>
+        </div>
+        <div>
+          <label className="block text-xs text-muted mb-1">Duration (weeks)</label>
+          <input
+            type="number"
+            value={weeks}
+            onChange={(e) => setWeeks(Number(e.target.value))}
+            className="w-full px-3 py-1.5 text-sm border border-border rounded-md bg-white"
+            min={1}
+            max={12}
+          />
+        </div>
+        <div className="col-span-2">
+          <label className="block text-xs text-muted mb-1">CTA to test</label>
+          <input
+            value={cta}
+            onChange={(e) => setCta(e.target.value)}
+            className="w-full px-3 py-1.5 text-sm border border-border rounded-md bg-white"
+            placeholder="e.g. Free Target Account List with intent data"
+          />
+        </div>
+        <div className="col-span-2">
+          <label className="block text-xs text-muted mb-1">Hypothesis</label>
+          <textarea
+            value={hypothesis}
+            onChange={(e) => setHypothesis(e.target.value)}
+            className="w-full px-3 py-1.5 text-sm border border-border rounded-md bg-white"
+            rows={2}
+            placeholder="What do you think will happen and why?"
+          />
+        </div>
+        <div className="col-span-2">
+          <label className="block text-xs text-muted mb-1">Success criteria</label>
+          <input
+            value={criteria}
+            onChange={(e) => setCriteria(e.target.value)}
+            className="w-full px-3 py-1.5 text-sm border border-border rounded-md bg-white"
+            placeholder="e.g. 15%+ reply rate, 3+ meetings in 2 weeks"
+          />
+        </div>
+      </div>
+      <div className="flex gap-2 mt-3">
+        <button
+          type="submit"
+          className="px-4 py-1.5 text-sm font-medium bg-accent text-white rounded-md hover:bg-accent-light transition-colors"
+        >
+          Add experiment
+        </button>
+        <button
+          type="button"
+          onClick={() => setOpen(false)}
+          className="px-4 py-1.5 text-sm font-medium text-muted hover:text-foreground transition-colors"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  );
+}
+
 export default function Home() {
   const [tab, setTab] = useState<Tab>("dashboard");
   const [sortKey, setSortKey] = useState<SortKey | null>(null);
   const [sortDir, setSortDir] = useState<SortDir>("desc");
+  const [proposals, setProposals] = useState(PROPOSED_EXPERIMENTS);
 
   const handleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -358,7 +499,7 @@ export default function Home() {
           >
             Proposed PMF Experiments
             <span className="ml-1.5 text-xs bg-zinc-100 text-muted px-1.5 py-0.5 rounded-full">
-              {PROPOSED_EXPERIMENTS.length}
+              {proposals.length}
             </span>
           </button>
         </div>
@@ -464,7 +605,7 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody>
-                {PROPOSED_EXPERIMENTS.map((p) => (
+                {proposals.map((p) => (
                   <ProposalRow key={p.id} proposal={p} />
                 ))}
               </tbody>
@@ -473,6 +614,8 @@ export default function Home() {
           <p className="text-xs text-zinc-400 mt-3">
             Click any row to expand. Based on Danner{"'"}s PMF framework: find the magic, run 5 experiments/week, stay focused.
           </p>
+
+          <AddExperimentForm onAdd={(p) => setProposals((prev) => [...prev, p])} />
         </div>
       )}
     </div>
