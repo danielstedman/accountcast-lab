@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 const API_TOKEN = process.env.PIPEDRIVE_API_TOKEN;
 const BASE_URL = "https://api.pipedrive.com/v1";
 const ACCOUNTCAST_PIPELINE_ID = 5;
@@ -43,7 +45,7 @@ async function fetchDeals(status: string): Promise<Deal[]> {
 
     const res = await fetch(
       `${BASE_URL}/pipelines/${ACCOUNTCAST_PIPELINE_ID}/deals?${params}`,
-      { next: { revalidate: 300 } }
+      { cache: "no-store" }
     );
     const json = await res.json();
 
