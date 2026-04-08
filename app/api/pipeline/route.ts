@@ -28,36 +28,35 @@ interface Deal {
   org_name: string | null;
 }
 
-async function fetchDeals(token: string, status: string): Promise<Deal[]> {
-  const deals: Deal[] = [];
+export async function GET() {
+  const token = process.env.PIPEDRIVE_API_TOKEN;
+  if (!token) {
+    return NextResponse.json({ error: "No API token configured" }, { status: 500 });
+  }
+
+  // Fetch all deals from AccountCast pipeline
+  const allDeals: Deal[] = [];
   let start = 0;
-  const limit = 100;
 
   while (true) {
     const params = new URLSearchParams({
       api_token: token,
       start: String(start),
-      limit: String(limit),
-      status,
+      limit: "100",
     });
 
-    const url = `${BASE_URL}/pipelines/${ACCOUNTCAST_PIPELINE_ID}/deals?${params}`;
-    const res = await fetch(url, { cache: "no-store" });
+    const res = await fetch(
+      `${BASE_URL}/pipelines/${ACCOUNTCAST_PIPELINE_ID}/deals?${params}`,
+      { cache: "no-store" }
+    );
 
-    if (!res.ok) {
-      console.error(`Pipedrive API error: ${res.status} ${res.statusText}`);
-      break;
-    }
-
+    if (!res.ok) break;
     const json = await res.json();
+    if (!json.success) break;
 
-    if (!json.success) {
-      console.error("Pipedrive API returned success=false", json);
-      break;
-    }
     if (json.data) {
       for (const d of json.data) {
-        deals.push({
+        allDeals.push({
           id: d.id,
           title: d.title,
           value: d.value || 0,
@@ -69,38 +68,14 @@ async function fetchDeals(token: string, status: string): Promise<Deal[]> {
         });
       }
     }
+
     if (json.additional_data?.pagination?.more_items_in_collection) {
       start = json.additional_data.pagination.next_start;
     } else break;
   }
 
-  return deals;
-}
-
-export async function GET() {
-  const token = process.env.PIPEDRIVE_API_TOKEN;
-  if (!token) {
-    return NextResponse.json({ error: "No API token configured" }, { status: 500 });
-  }
-
-  // Debug: test raw Pipedrive response
-  const testUrl = `${BASE_URL}/pipelines/${ACCOUNTCAST_PIPELINE_ID}/deals?api_token=${token}&status=open&limit=10`;
-  const testRes = await fetch(testUrl, { cache: "no-store" });
-  const testJson = await testRes.json();
-
-  if (!testJson.success || !testJson.data) {
-    return NextResponse.json({
-      error: "Pipedrive API failed",
-      status: testRes.status,
-      response: testJson,
-      tokenPrefix: token.substring(0, 6),
-    }, { status: 502 });
-  }
-
-  const [openDeals, wonDeals] = await Promise.all([
-    fetchDeals(token, "open"),
-    fetchDeals(token, "won"),
-  ]);
+  const openDeals = allDeals.filter((d) => d.status === "open");
+  const wonDeals = allDeals.filter((d) => d.status === "won");
 
   const stages = DISPLAY_BUCKETS.map((bucket, i) => {
     const bucketDeals = openDeals.filter((d) => bucket.stageIds.includes(d.stage_id));
@@ -123,8 +98,9 @@ export async function GET() {
 
   return NextResponse.json({
     pipeline: "AccountCast",
-    totalDeals: openDeals.length + wonDeals.length,
-    totalValue: [...openDeals, ...wonDeals].reduce((sum, d) => sum + d.value, 0),
+    totalDeals: allDeals.length,
+    totalValue: allDeals.reduce((sum, d) => sum + d.value, 0),
     stages,
+    debug: { fetchedCount: allDeals.length, tokenPrefix: token.substring(0, 4) },
   });
 }
