@@ -119,22 +119,22 @@ function CampaignRow({ campaign }: { campaign: Campaign }) {
           <span className="text-zinc-400 text-sm">{open ? "\u25BE" : "\u25B8"}</span>
         </td>
         <td className="py-3 pr-4">
-          <div className="flex items-center gap-2">
-            <div className="font-medium text-sm text-foreground">{c.name}</div>
+          <div className="flex items-center gap-2 flex-wrap">
+            <div className="font-medium text-sm text-foreground truncate max-w-[140px] lg:max-w-none">{c.name}</div>
             <StatusDot status={c.status} />
-            <MotionBadge motion={c.motion} />
+            <span className="hidden sm:inline"><MotionBadge motion={c.motion} /></span>
           </div>
-          <div className="text-xs text-muted">{c.channel}{c.mode ? ` \u00B7 ${c.mode}` : ""} \u00B7 {c.dateRange}</div>
+          <div className="text-xs text-muted truncate max-w-[140px] lg:max-w-none">{c.channel}{c.mode ? ` \u00B7 ${c.mode}` : ""} \u00B7 {c.dateRange}</div>
         </td>
-        <td className="py-3 pr-4 text-sm font-mono text-right">{num(c.targeted)}</td>
+        <td className="py-3 pr-4 text-sm font-mono text-right hidden lg:table-cell">{num(c.targeted)}</td>
         <td className="py-3 pr-4 text-sm font-mono text-right">{num(c.reached)}</td>
-        <td className="py-3 pr-4 text-sm font-mono text-right">
+        <td className="py-3 pr-4 text-sm font-mono text-right hidden lg:table-cell">
           <RepliesCell value={c.replies} />
         </td>
-        <td className="py-3 pr-4 text-sm font-mono text-right">
+        <td className="py-3 pr-4 text-sm font-mono text-right hidden lg:table-cell">
           <ConversionCell value={c.conversion} />
         </td>
-        <td className="py-3 pr-4 text-sm font-mono text-right">
+        <td className="py-3 pr-4 text-sm font-mono text-right hidden lg:table-cell">
           {c.meetings > 0 ? (
             <span className="font-semibold">{c.meetings}</span>
           ) : (
@@ -153,7 +153,7 @@ function CampaignRow({ campaign }: { campaign: Campaign }) {
           <td></td>
           <td colSpan={8} className="py-3 pr-6">
             {c.details.length > 0 && (
-              <div className="max-w-md mb-2">
+              <div className="max-w-full lg:max-w-md mb-2">
                 {c.details.map((d) => (
                   <div
                     key={d.label}
@@ -209,10 +209,10 @@ function ProposalRow({ proposal }: { proposal: ProposedExperiment }) {
           </div>
           <div className="text-xs text-muted">{p.channel} \u00B7 {p.durationWeeks} week{p.durationWeeks > 1 ? "s" : ""}</div>
         </td>
-        <td className="py-3 pr-4 text-sm text-muted cursor-pointer" colSpan={2} onClick={() => setOpen(!open)}>
+        <td className="py-3 pr-4 text-sm text-muted cursor-pointer hidden lg:table-cell" colSpan={2} onClick={() => setOpen(!open)}>
           {p.ctaTested}
         </td>
-        <td className="py-3 pr-4 text-sm text-muted cursor-pointer" colSpan={3} onClick={() => setOpen(!open)}>
+        <td className="py-3 pr-4 text-sm text-muted cursor-pointer hidden lg:table-cell" colSpan={3} onClick={() => setOpen(!open)}>
           {p.successCriteria}
         </td>
         <td className="py-3 pr-4">
@@ -307,7 +307,7 @@ function AddExperimentForm({ onAdd }: { onAdd: (p: ProposedExperiment) => void }
   return (
     <form onSubmit={handleSubmit} className="mt-4 border border-border rounded-xl p-5 bg-zinc-50">
       <h3 className="text-sm font-semibold text-foreground mb-3">New experiment idea</h3>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
           <label className="block text-xs text-muted mb-1">Name</label>
           <input
@@ -350,7 +350,7 @@ function AddExperimentForm({ onAdd }: { onAdd: (p: ProposedExperiment) => void }
             max={12}
           />
         </div>
-        <div className="col-span-2">
+        <div className="sm:col-span-2">
           <label className="block text-xs text-muted mb-1">CTA to test</label>
           <input
             value={cta}
@@ -359,7 +359,7 @@ function AddExperimentForm({ onAdd }: { onAdd: (p: ProposedExperiment) => void }
             placeholder="e.g. Free Target Account List with intent data"
           />
         </div>
-        <div className="col-span-2">
+        <div className="sm:col-span-2">
           <label className="block text-xs text-muted mb-1">Hypothesis</label>
           <textarea
             value={hypothesis}
@@ -369,7 +369,7 @@ function AddExperimentForm({ onAdd }: { onAdd: (p: ProposedExperiment) => void }
             placeholder="What do you think will happen and why?"
           />
         </div>
-        <div className="col-span-2">
+        <div className="sm:col-span-2">
           <label className="block text-xs text-muted mb-1">Success criteria</label>
           <input
             value={criteria}
@@ -445,13 +445,13 @@ export default function Home() {
   const withPmf = CAMPAIGNS.filter((c) => c.pmfScore !== null && c.pmfScore > 0);
   const bestPmf = withPmf.length > 0 ? Math.max(...withPmf.map((c) => c.pmfScore!)) : null;
 
-  const columns: { key: SortKey; label: string; align: string }[] = [
+  const columns: { key: SortKey; label: string; align: string; hideOnMobile?: boolean }[] = [
     { key: "name", label: "Campaign", align: "text-left" },
-    { key: "targeted", label: "Targeted", align: "text-right" },
+    { key: "targeted", label: "Targeted", align: "text-right", hideOnMobile: true },
     { key: "reached", label: "Reached", align: "text-right" },
-    { key: "replies", label: "Replies", align: "text-right" },
-    { key: "conversion", label: "Conversion", align: "text-right" },
-    { key: "meetings", label: "Meetings", align: "text-right" },
+    { key: "replies", label: "Replies", align: "text-right", hideOnMobile: true },
+    { key: "conversion", label: "Conversion", align: "text-right", hideOnMobile: true },
+    { key: "meetings", label: "Meetings", align: "text-right", hideOnMobile: true },
     { key: "pmfScore", label: "PMF", align: "text-center" },
     { key: "confidence", label: "Confidence", align: "text-left" },
   ];
@@ -460,7 +460,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="border-b border-border">
-        <div className="max-w-6xl mx-auto px-6 py-5 flex items-end justify-between">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-4 lg:py-5 flex flex-col sm:flex-row sm:items-end justify-between gap-1">
           <div>
             <h1 className="text-xl font-bold text-foreground">
               Account<span className="text-accent">Cast</span>
@@ -475,7 +475,7 @@ export default function Home() {
           </div>
         </div>
         {/* Tabs */}
-        <div className="max-w-6xl mx-auto px-6 flex gap-1">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 flex gap-1 overflow-x-auto">
           <button
             onClick={() => setTab("dashboard")}
             className={`px-4 py-2 text-sm font-medium rounded-t-lg transition-colors ${
@@ -508,8 +508,8 @@ export default function Home() {
       {tab === "dashboard" && (
         <>
           {/* Summary cards */}
-          <div className="max-w-6xl mx-auto px-6 py-5">
-            <div className="grid grid-cols-4 gap-4">
+          <div className="max-w-6xl mx-auto px-4 lg:px-6 py-4 lg:py-5">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
               <div className="border border-border rounded-lg px-4 py-3">
                 <div className="text-xs text-muted uppercase tracking-wide">Campaigns</div>
                 <div className="text-2xl font-bold font-mono mt-0.5">{CAMPAIGNS.length}</div>
@@ -541,7 +541,7 @@ export default function Home() {
             </div>
 
             {/* Motion legend */}
-            <div className="flex items-center gap-4 mt-3 text-xs text-muted">
+            <div className="flex flex-wrap items-center gap-2 lg:gap-4 mt-3 text-xs text-muted">
               <span className="font-medium text-foreground">Motions:</span>
               {(Object.entries(MOTION_CONFIG) as [Motion, typeof MOTION_CONFIG.sales][]).map(([key, val]) => (
                 <span key={key} className="flex items-center gap-1">
@@ -552,8 +552,8 @@ export default function Home() {
           </div>
 
           {/* Dashboard table */}
-          <div className="max-w-6xl mx-auto px-6 pb-12">
-            <div className="border border-border rounded-xl overflow-hidden">
+          <div className="max-w-6xl mx-auto px-4 lg:px-6 pb-12">
+            <div className="border border-border rounded-xl overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="bg-zinc-50 border-b border-border text-xs text-muted uppercase tracking-wider">
@@ -562,7 +562,7 @@ export default function Home() {
                       <th
                         key={col.key}
                         onClick={() => handleSort(col.key)}
-                        className={`py-2.5 pr-4 ${col.align} font-medium cursor-pointer hover:text-foreground transition-colors select-none`}
+                        className={`py-2.5 pr-4 ${col.align} font-medium cursor-pointer hover:text-foreground transition-colors select-none ${col.hideOnMobile ? "hidden lg:table-cell" : ""}`}
                       >
                         {col.label}
                         <SortIcon column={col.key} current={sortKey} dir={sortDir} />
@@ -585,7 +585,7 @@ export default function Home() {
       )}
 
       {tab === "lab" && (
-        <div className="max-w-6xl mx-auto px-6 py-6 pb-12">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-6 pb-12">
           <div className="mb-6">
             <h2 className="text-lg font-semibold text-foreground">Proposed PMF Experiments</h2>
             <p className="text-sm text-muted mt-1">
@@ -594,7 +594,7 @@ export default function Home() {
           </div>
 
           {/* Definitions */}
-          <div className="grid grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-4 mb-6">
             <div className="border border-border rounded-lg px-4 py-3">
               <div className="text-sm font-semibold text-foreground mb-1">Product-Market Fit (PMF)</div>
               <p className="text-xs text-muted">
@@ -618,14 +618,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border border-border rounded-xl overflow-hidden">
+          <div className="border border-border rounded-xl overflow-x-auto">
             <table className="w-full">
               <thead>
                 <tr className="bg-zinc-50 border-b border-border text-xs text-muted uppercase tracking-wider">
                   <th className="w-8 py-2.5 px-4"></th>
                   <th className="py-2.5 pr-4 text-left font-medium">Experiment</th>
-                  <th className="py-2.5 pr-4 text-left font-medium" colSpan={2}>CTA to test</th>
-                  <th className="py-2.5 pr-4 text-left font-medium" colSpan={3}>Success criteria</th>
+                  <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell" colSpan={2}>CTA to test</th>
+                  <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell" colSpan={3}>Success criteria</th>
                   <th className="py-2.5 pr-4 text-center font-medium">Vote</th>
                 </tr>
               </thead>
