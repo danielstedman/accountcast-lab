@@ -2,11 +2,9 @@ import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
-const API_TOKEN = process.env.PIPEDRIVE_API_TOKEN;
 const BASE_URL = "https://api.pipedrive.com/v1";
 const ACCOUNTCAST_PIPELINE_ID = 5;
 
-// Current AccountCast pipeline stages (updated Apr 8 2026)
 const STAGE_NAMES: Record<number, string> = {
   26: "Qualification",
   28: "Proposal/Scope",
@@ -30,14 +28,14 @@ interface Deal {
   org_name: string | null;
 }
 
-async function fetchDeals(status: string): Promise<Deal[]> {
+async function fetchDeals(token: string, status: string): Promise<Deal[]> {
   const deals: Deal[] = [];
   let start = 0;
   const limit = 100;
 
   while (true) {
     const params = new URLSearchParams({
-      api_token: API_TOKEN!,
+      api_token: token,
       start: String(start),
       limit: String(limit),
       status,
@@ -73,16 +71,16 @@ async function fetchDeals(status: string): Promise<Deal[]> {
 }
 
 export async function GET() {
-  if (!API_TOKEN) {
-    return NextResponse.json({ error: "No API token" }, { status: 500 });
+  const token = process.env.PIPEDRIVE_API_TOKEN;
+  if (!token) {
+    return NextResponse.json({ error: "No API token configured" }, { status: 500 });
   }
 
   const [openDeals, wonDeals] = await Promise.all([
-    fetchDeals("open"),
-    fetchDeals("won"),
+    fetchDeals(token, "open"),
+    fetchDeals(token, "won"),
   ]);
 
-  // Group open deals into display buckets
   const stages = DISPLAY_BUCKETS.map((bucket, i) => {
     const bucketDeals = openDeals.filter((d) => bucket.stageIds.includes(d.stage_id));
     return {
@@ -94,7 +92,6 @@ export async function GET() {
     };
   });
 
-  // Add Closed/Won
   stages.push({
     id: 99,
     name: "Closed/Won",
