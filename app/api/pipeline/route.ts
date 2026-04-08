@@ -4,7 +4,8 @@ const API_TOKEN = process.env.PIPEDRIVE_API_TOKEN;
 const BASE_URL = "https://api.pipedrive.com/v1";
 const ACCOUNTCAST_PIPELINE_ID = 5;
 
-const STAGE_NAMES: Record<number, string> = {
+// All stages for lookup
+const ALL_STAGES: Record<number, string> = {
   26: "Prospecting",
   27: "Contacted",
   28: "Engaged",
@@ -13,6 +14,13 @@ const STAGE_NAMES: Record<number, string> = {
   31: "Proposal",
   32: "Negotiation",
 };
+
+// Stages to display — map multiple Pipedrive stages into summary buckets
+const DISPLAY_BUCKETS: { name: string; stageIds: number[] }[] = [
+  { name: "Qualified", stageIds: [26, 27, 28, 29, 30] },
+  { name: "Proposal", stageIds: [31] },
+  { name: "Negotiation", stageIds: [32] },
+];
 
 interface Deal {
   id: number;
@@ -53,7 +61,7 @@ async function fetchDeals(status: string): Promise<Deal[]> {
           value: d.value || 0,
           currency: d.currency || "USD",
           stage_id: d.stage_id,
-          stage: STAGE_NAMES[d.stage_id] || `Stage ${d.stage_id}`,
+          stage: ALL_STAGES[d.stage_id] || `Stage ${d.stage_id}`,
           status: d.status,
           org_name: d.org_name || null,
         });
@@ -77,19 +85,19 @@ export async function GET() {
     fetchDeals("won"),
   ]);
 
-  // Group open deals by stage
-  const stages = Object.entries(STAGE_NAMES).map(([id, name]) => {
-    const stageDeals = openDeals.filter((d) => d.stage_id === Number(id));
+  // Group open deals into display buckets
+  const stages = DISPLAY_BUCKETS.map((bucket, i) => {
+    const bucketDeals = openDeals.filter((d) => bucket.stageIds.includes(d.stage_id));
     return {
-      id: Number(id),
-      name,
-      count: stageDeals.length,
-      value: stageDeals.reduce((sum, d) => sum + d.value, 0),
-      deals: stageDeals,
+      id: i + 1,
+      name: bucket.name,
+      count: bucketDeals.length,
+      value: bucketDeals.reduce((sum, d) => sum + d.value, 0),
+      deals: bucketDeals,
     };
   });
 
-  // Add Closed/Won as a virtual stage
+  // Add Closed/Won
   stages.push({
     id: 99,
     name: "Closed/Won",

@@ -542,7 +542,7 @@ export default function Home() {
           {pipeline && (
             <div className="max-w-6xl mx-auto px-4 lg:px-6 pt-4 lg:pt-5">
               <div className="text-xs font-medium text-muted uppercase tracking-wider mb-2">AccountCast Pipeline (Pipedrive)</div>
-              <div className="grid grid-cols-4 lg:grid-cols-8 gap-2">
+              <div className="grid grid-cols-4 gap-2 lg:gap-3">
                 {pipeline.stages.map((stage) => {
                   const isActive = stage.count > 0;
                   const isWon = stage.name === "Closed/Won";
