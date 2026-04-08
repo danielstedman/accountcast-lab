@@ -542,26 +542,31 @@ export default function Home() {
           {pipeline && (
             <div className="max-w-6xl mx-auto px-4 lg:px-6 pt-4 lg:pt-5">
               <div className="text-xs font-medium text-muted uppercase tracking-wider mb-2">AccountCast Pipeline (Pipedrive)</div>
-              <div className="grid grid-cols-3 lg:grid-cols-7 gap-2">
+              <div className="grid grid-cols-4 lg:grid-cols-8 gap-2">
                 {pipeline.stages.map((stage) => {
                   const isActive = stage.count > 0;
+                  const isWon = stage.name === "Closed/Won";
                   return (
                     <div
                       key={stage.id}
                       className={`rounded-lg px-3 py-2.5 border ${
-                        isActive
+                        isWon && isActive
+                          ? "border-emerald-300 bg-emerald-50"
+                          : isActive
                           ? "border-accent/30 bg-accent/5"
                           : "border-border bg-white"
                       }`}
                     >
-                      <div className="text-[10px] text-muted uppercase tracking-wider truncate">
+                      <div className={`text-[10px] uppercase tracking-wider truncate ${isWon ? "text-emerald-600 font-semibold" : "text-muted"}`}>
                         {stage.name}
                       </div>
-                      <div className={`text-lg font-bold font-mono ${isActive ? "text-foreground" : "text-zinc-300"}`}>
+                      <div className={`text-lg font-bold font-mono ${
+                        isWon && isActive ? "text-emerald-700" : isActive ? "text-foreground" : "text-zinc-300"
+                      }`}>
                         {stage.count}
                       </div>
                       {stage.value > 0 && (
-                        <div className="text-xs text-accent font-mono">
+                        <div className={`text-xs font-mono ${isWon ? "text-emerald-600" : "text-accent"}`}>
                           ${stage.value.toLocaleString()}
                         </div>
                       )}

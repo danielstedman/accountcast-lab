@@ -4,7 +4,6 @@ const API_TOKEN = process.env.PIPEDRIVE_API_TOKEN;
 const BASE_URL = "https://api.pipedrive.com/v1";
 const ACCOUNTCAST_PIPELINE_ID = 5;
 
-// AccountCast pipeline stages
 const STAGE_NAMES: Record<number, string> = {
   26: "Prospecting",
   27: "Contacted",
@@ -26,7 +25,7 @@ interface Deal {
   org_name: string | null;
 }
 
-async function fetchAccountCastDeals(): Promise<Deal[]> {
+async function fetchDeals(status: string): Promise<Deal[]> {
   const deals: Deal[] = [];
   let start = 0;
   const limit = 100;
@@ -36,7 +35,7 @@ async function fetchAccountCastDeals(): Promise<Deal[]> {
       api_token: API_TOKEN!,
       start: String(start),
       limit: String(limit),
-      status: "open",
+      status,
     });
 
     const res = await fetch(
@@ -73,11 +72,14 @@ export async function GET() {
     return NextResponse.json({ error: "No API token" }, { status: 500 });
   }
 
-  const deals = await fetchAccountCastDeals();
+  const [openDeals, wonDeals] = await Promise.all([
+    fetchDeals("open"),
+    fetchDeals("won"),
+  ]);
 
-  // Group by stage
+  // Group open deals by stage
   const stages = Object.entries(STAGE_NAMES).map(([id, name]) => {
-    const stageDeals = deals.filter((d) => d.stage_id === Number(id));
+    const stageDeals = openDeals.filter((d) => d.stage_id === Number(id));
     return {
       id: Number(id),
       name,
@@ -87,10 +89,19 @@ export async function GET() {
     };
   });
 
+  // Add Closed/Won as a virtual stage
+  stages.push({
+    id: 99,
+    name: "Closed/Won",
+    count: wonDeals.length,
+    value: wonDeals.reduce((sum, d) => sum + d.value, 0),
+    deals: wonDeals,
+  });
+
   return NextResponse.json({
     pipeline: "AccountCast",
-    totalDeals: deals.length,
-    totalValue: deals.reduce((sum, d) => sum + d.value, 0),
+    totalDeals: openDeals.length + wonDeals.length,
+    totalValue: [...openDeals, ...wonDeals].reduce((sum, d) => sum + d.value, 0),
     stages,
   });
 }
