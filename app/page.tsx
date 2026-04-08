@@ -375,7 +375,7 @@ export default function Home() {
           <div>
             <h1 className="text-xl font-bold text-foreground">
               Account<span className="text-accent">Cast</span>
-              <span className="text-muted font-normal ml-1.5">Lab</span>
+              <span className="text-muted font-normal ml-1.5">Dashboard</span>
             </h1>
             <p className="text-sm text-muted mt-0.5">
               Growth experiments {"\u2014"} at a glance

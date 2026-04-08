@@ -13,16 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AccountCast Lab",
+  title: "AccountCast Dashboard",
   description: "PMF experiments & growth dashboard — 9 campaigns, 4 deals in pipeline, tracking toward 80% PMF",
   openGraph: {
-    title: "AccountCast Lab",
+    title: "AccountCast Dashboard",
     description: "PMF experiments & growth dashboard — 9 campaigns, 4 deals in pipeline",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AccountCast Lab",
+    title: "AccountCast Dashboard",
     description: "PMF experiments & growth dashboard",
   },
 };

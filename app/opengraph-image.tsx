@@ -43,7 +43,7 @@ export default async function Image() {
               marginLeft: 8,
             }}
           >
-            Lab
+            Dashboard
           </span>
         </div>
 
