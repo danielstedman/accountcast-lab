@@ -4,7 +4,6 @@ export const dynamic = "force-dynamic";
 
 const BASE_URL = "https://api.lemlist.com/api";
 
-// Only track these AccountCast campaigns
 const ACCOUNTCAST_CAMPAIGNS: Record<string, string> = {
   cam_BNmQsFaGTLY3yXkXF: "AccountCast (Danny)",
   cam_mu9WWo7NqjpwXubWh: "Tier 1 AccountCast (Kyla)",
@@ -23,24 +22,33 @@ interface CampaignStats {
   bounced: number;
 }
 
+function authHeader(token: string) {
+  return { Authorization: "Basic " + btoa(":" + token) };
+}
+
 async function fetchActivities(token: string, campaignId: string) {
   let sent = 0, opened = 0, clicked = 0, replied = 0, bounced = 0;
   let offset = 0;
 
   while (true) {
-    const res = await fetch(
-      `${BASE_URL}/activities?campaignId=${campaignId}&limit=100&offset=${offset}`,
-      {
-        headers: { Authorization: `Basic ${Buffer.from(`:${token}`).toString("base64")}` },
-        cache: "no-store",
-      }
-    );
+    const url = `${BASE_URL}/activities?campaignId=${campaignId}&limit=100&offset=${offset}`;
+    const res = await fetch(url, {
+      headers: authHeader(token),
+      cache: "no-store",
+    });
 
     if (!res.ok) break;
-    const data = await res.json();
+
+    let data: unknown[];
+    try {
+      data = await res.json();
+    } catch {
+      break;
+    }
+
     if (!Array.isArray(data) || data.length === 0) break;
 
-    for (const a of data) {
+    for (const a of data as Record<string, string>[]) {
       switch (a.type) {
         case "emailsSent": sent++; break;
         case "emailsOpened": opened++; break;
@@ -66,19 +74,20 @@ export async function GET() {
   const campaigns: CampaignStats[] = [];
 
   for (const [id, name] of Object.entries(ACCOUNTCAST_CAMPAIGNS)) {
-    // Get campaign status
-    const campRes = await fetch(`${BASE_URL}/campaigns/${id}`, {
-      headers: { Authorization: `Basic ${Buffer.from(`:${token}`).toString("base64")}` },
-      cache: "no-store",
-    });
-
     let status = "unknown";
-    if (campRes.ok) {
-      const campData = await campRes.json();
-      status = campData.status || "unknown";
+    try {
+      const campRes = await fetch(`${BASE_URL}/campaigns/${id}`, {
+        headers: authHeader(token),
+        cache: "no-store",
+      });
+      if (campRes.ok) {
+        const campData = await campRes.json();
+        status = campData.status || "unknown";
+      }
+    } catch {
+      // skip
     }
 
-    // Get activity stats
     const stats = await fetchActivities(token, id);
 
     campaigns.push({
