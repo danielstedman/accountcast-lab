@@ -180,7 +180,7 @@ export const CAMPAIGNS: Campaign[] = [
     confidenceNote: "Data from Lemlist API activities. High reply rate.",
     details: [
       { label: "Emails sent", value: 24 },
-      { label: "Opened", value: 59 },
+      { label: "Opens (total, incl. re-opens)", value: 59 },
       { label: "Replied", value: 13 },
       { label: "Bounced", value: 2 },
     ],
