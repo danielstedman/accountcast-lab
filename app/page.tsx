@@ -18,6 +18,22 @@ interface PipelineData {
   stages: PipelineStage[];
 }
 
+interface TamData {
+  total: number;
+  touched: number;
+  untouched: number;
+  multiChannel: number;
+  coverage: number;
+  touchedAccounts: {
+    company: string;
+    domain: string;
+    industry: string;
+    size: string;
+    channels: string[];
+    touchCount: number;
+  }[];
+}
+
 interface LemlistCampaign {
   id: string;
   name: string;
@@ -31,7 +47,7 @@ interface LemlistCampaign {
 
 type SortKey = "name" | "targeted" | "reached" | "replies" | "conversion" | "meetings" | "pmfScore" | "confidence";
 type SortDir = "asc" | "desc";
-type Tab = "dashboard" | "lab";
+type Tab = "dashboard" | "lab" | "tam";
 
 const CONFIDENCE_ORDER: Record<Confidence, number> = { high: 3, medium: 2, low: 1 };
 
@@ -318,6 +334,7 @@ export default function Home() {
   const [proposals, setProposals] = useState(PROPOSED_EXPERIMENTS);
   const [pipeline, setPipeline] = useState<PipelineData | null>(null);
   const [lemlistData, setLemlistData] = useState<LemlistCampaign[] | null>(null);
+  const [tamData, setTamData] = useState<TamData | null>(null);
   const [defsOpen, setDefsOpen] = useState(false);
 
   useEffect(() => {
@@ -328,6 +345,10 @@ export default function Home() {
     fetch("/api/lemlist")
       .then((r) => r.json())
       .then((data) => setLemlistData(data.campaigns))
+      .catch(() => {});
+    fetch("/api/tam")
+      .then((r) => r.json())
+      .then((data) => setTamData(data))
       .catch(() => {});
   }, []);
 
@@ -461,6 +482,21 @@ export default function Home() {
             <span className="ml-1.5 text-xs bg-zinc-100 text-muted px-1.5 py-0.5 rounded-full">
               {proposals.length}
             </span>
+          </button>
+          <button
+            onClick={() => setTab("tam")}
+            className={`px-4 py-2 text-sm font-medium rounded-t-lg transition-colors whitespace-nowrap ${
+              tab === "tam"
+                ? "bg-white text-foreground border border-border border-b-white -mb-px"
+                : "text-muted hover:text-foreground"
+            }`}
+          >
+            TAM Coverage
+            {tamData && (
+              <span className="ml-1.5 text-xs bg-zinc-100 text-muted px-1.5 py-0.5 rounded-full">
+                {tamData.coverage}%
+              </span>
+            )}
           </button>
         </div>
       </header>
@@ -658,6 +694,107 @@ export default function Home() {
           </p>
 
           <AddIdeaInput onAdd={(p) => setProposals((prev) => [...prev, p])} />
+        </div>
+      )}
+
+      {tab === "tam" && (
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-6 pb-12">
+          <div className="mb-6">
+            <h2 className="text-lg font-semibold text-foreground">Target Account Coverage</h2>
+            <p className="text-sm text-muted mt-1">
+              How much of our TAM have we touched across all channels?
+            </p>
+          </div>
+
+          {!tamData ? (
+            <p className="text-sm text-muted">Loading TAM data...</p>
+          ) : (
+            <>
+              {/* Summary */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 mb-6">
+                <div className="border border-border rounded-lg px-4 py-3">
+                  <div className="text-xs text-muted uppercase tracking-wide">Total TAM</div>
+                  <div className="text-2xl font-bold font-mono mt-0.5">{tamData.total.toLocaleString()}</div>
+                  <div className="text-xs text-muted">target accounts</div>
+                </div>
+                <div className="border border-border rounded-lg px-4 py-3">
+                  <div className="text-xs text-muted uppercase tracking-wide">Accounts touched</div>
+                  <div className="text-2xl font-bold font-mono mt-0.5">{tamData.touched}</div>
+                  <div className="text-xs text-muted">{tamData.coverage}% coverage</div>
+                </div>
+                <div className="border border-border rounded-lg px-4 py-3">
+                  <div className="text-xs text-muted uppercase tracking-wide">Multi-channel</div>
+                  <div className="text-2xl font-bold font-mono mt-0.5">{tamData.multiChannel}</div>
+                  <div className="text-xs text-muted">touched by 2+ campaigns</div>
+                </div>
+                <div className="border border-border rounded-lg px-4 py-3">
+                  <div className="text-xs text-muted uppercase tracking-wide">Untouched</div>
+                  <div className="text-2xl font-bold font-mono mt-0.5 text-zinc-400">{tamData.untouched.toLocaleString()}</div>
+                  <div className="text-xs text-muted">{(100 - tamData.coverage).toFixed(1)}% of TAM</div>
+                </div>
+              </div>
+
+              {/* Coverage bar */}
+              <div className="mb-6">
+                <div className="flex justify-between text-xs text-muted mb-1">
+                  <span>TAM Coverage</span>
+                  <span>{tamData.coverage}%</span>
+                </div>
+                <div className="w-full h-3 bg-zinc-100 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-accent rounded-full transition-all"
+                    style={{ width: `${Math.max(tamData.coverage, 1)}%` }}
+                  />
+                </div>
+              </div>
+
+              {/* Touched accounts table */}
+              <div className="border border-border rounded-xl overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="bg-zinc-50 border-b border-border text-xs text-muted uppercase tracking-wider">
+                      <th className="py-2.5 px-4 text-left font-medium">Account</th>
+                      <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell">Industry</th>
+                      <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell">Size</th>
+                      <th className="py-2.5 pr-4 text-center font-medium">Touches</th>
+                      <th className="py-2.5 pr-4 text-left font-medium">Channels</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {tamData.touchedAccounts.map((a) => (
+                      <tr key={a.domain} className="border-b border-border hover:bg-zinc-50 transition-colors">
+                        <td className="py-2.5 px-4">
+                          <div className="font-medium text-sm text-foreground">{a.company}</div>
+                          <div className="text-xs text-muted">{a.domain}</div>
+                        </td>
+                        <td className="py-2.5 pr-4 text-xs text-muted hidden lg:table-cell">{a.industry}</td>
+                        <td className="py-2.5 pr-4 text-xs text-muted hidden lg:table-cell">{a.size}</td>
+                        <td className="py-2.5 pr-4 text-center">
+                          <span className={`text-sm font-mono font-semibold ${
+                            a.touchCount >= 3 ? "text-emerald-600" : a.touchCount >= 2 ? "text-accent" : "text-foreground"
+                          }`}>
+                            {a.touchCount}
+                          </span>
+                        </td>
+                        <td className="py-2.5 pr-4">
+                          <div className="flex flex-wrap gap-1">
+                            {a.channels.map((ch) => (
+                              <span key={ch} className="px-1.5 py-0.5 text-[10px] rounded bg-zinc-100 text-muted">
+                                {ch}
+                              </span>
+                            ))}
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-zinc-400 mt-3">
+                Showing accounts from TAM that have been touched by at least one campaign. Sorted by number of channel touches.
+              </p>
+            </>
+          )}
         </div>
       )}
     </div>

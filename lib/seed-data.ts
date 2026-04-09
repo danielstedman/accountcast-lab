@@ -317,6 +317,106 @@ export const CAMPAIGNS: Campaign[] = [
 ];
 
 export const PROPOSED_EXPERIMENTS: ProposedExperiment[] = [
+  // ===== ASAP PRIORITIES =====
+  {
+    id: "asap-1",
+    name: "Homepage CTA — Schedule a Demo",
+    channel: "accountcast.tv",
+    motion: "product",
+    hypothesis:
+      "Replacing 'Talk to Sales' with 'Schedule a Demo' is lower friction — prospects know exactly what they're getting.",
+    ctaTested: "Schedule a demo",
+    durationWeeks: 2,
+    successCriteria:
+      "1%+ CTA click rate (vs. current 0%).",
+    defaultScore: 0,
+    startDate: "",
+  },
+  {
+    id: "asap-2",
+    name: "Homepage CTA — Download One-Pager",
+    channel: "accountcast.tv",
+    motion: "product",
+    hypothesis:
+      "A downloadable one-pager (gated with email) gives value first and captures leads without requiring a sales call.",
+    ctaTested: "Download the one-pager (enter email)",
+    durationWeeks: 2,
+    successCriteria:
+      "1%+ CTA click rate. Capture 10+ emails in 2 weeks.",
+    defaultScore: 0,
+    startDate: "",
+  },
+  {
+    id: "asap-3",
+    name: "Homepage CTA — Read the White Paper",
+    channel: "accountcast.tv",
+    motion: "product",
+    hypothesis:
+      "A white paper (gated with email) positions AccountCast as a thought leader and captures leads from research-oriented buyers.",
+    ctaTested: "Read the white paper (enter email)",
+    durationWeeks: 2,
+    successCriteria:
+      "1%+ CTA click rate. Capture 10+ emails in 2 weeks.",
+    defaultScore: 0,
+    startDate: "",
+  },
+  {
+    id: "asap-4",
+    name: "Homepage CTA — $2,000 Toward First Campaign",
+    channel: "accountcast.tv",
+    motion: "product",
+    hypothesis:
+      "Framing as 'we will give you $2,000' feels like a gift. Reduces risk and incentivizes trial.",
+    ctaTested: "We will give you $2,000 toward your first campaign",
+    durationWeeks: 2,
+    successCriteria:
+      "1%+ CTA click rate (vs. current 0%).",
+    defaultScore: 0,
+    startDate: "",
+  },
+  {
+    id: "asap-5",
+    name: "Homepage CTA — $2,000 Off First Campaign",
+    channel: "accountcast.tv",
+    motion: "product",
+    hypothesis:
+      "Framing as '$2,000 off' feels like a discount. Test whether 'give you' or 'off' converts better.",
+    ctaTested: "$2,000 off your first campaign",
+    durationWeeks: 2,
+    successCriteria:
+      "1%+ CTA click rate. Compare against 'toward' framing.",
+    defaultScore: 0,
+    startDate: "",
+  },
+  {
+    id: "asap-6",
+    name: "Britt — More Emails from 6sense/Clay",
+    channel: "6sense / Clay",
+    motion: "sales",
+    hypothesis:
+      "Expanding the lead list with 6sense/Clay intent data will give us more TAM accounts to target across all outbound campaigns.",
+    ctaTested: "N/A — lead sourcing",
+    durationWeeks: 1,
+    successCriteria:
+      "500+ new emails added to outbound lists from TAM accounts.",
+    defaultScore: 0,
+    startDate: "",
+  },
+  {
+    id: "asap-7",
+    name: "Danny — Re-upload Edtech List (TIMA)",
+    channel: "Lemlist",
+    motion: "sales",
+    hypothesis:
+      "Re-uploading the Edtech TAL to Lemlist will open a new audience vertical for AccountCast outbound.",
+    ctaTested: "N/A — list upload",
+    durationWeeks: 1,
+    successCriteria:
+      "List uploaded and campaign launched.",
+    defaultScore: 0,
+    startDate: "",
+  },
+  // ===== ADDITIONAL EXPERIMENTS =====
   {
     id: "prop-001",
     name: "Free Target Account List Offer",
@@ -328,76 +428,6 @@ export const PROPOSED_EXPERIMENTS: ProposedExperiment[] = [
     durationWeeks: 2,
     successCriteria:
       "15%+ reply rate on Lemlist (vs. current 0%) and 50%+ of TAL recipients request a follow-up call.",
-    defaultScore: 5,
-    startDate: "",
-  },
-  {
-    id: "prop-003a",
-    name: "Homepage CTA — 60s Demo Video",
-    channel: "accountcast.tv",
-    motion: "product",
-    hypothesis:
-      "Replacing 'Talk to Sales' with 'See a 60-second demo' removes all commitment. Prospects can experience the magic moment without talking to anyone.",
-    ctaTested: "See a 60-second demo",
-    durationWeeks: 2,
-    successCriteria:
-      "1%+ CTA click rate (vs. current 0%). 50%+ video completion.",
-    defaultScore: 0,
-    startDate: "",
-  },
-  {
-    id: "prop-003b",
-    name: "Homepage CTA — Free TAL Builder",
-    channel: "accountcast.tv",
-    motion: "product",
-    hypothesis:
-      "Offering a free Target Account List gives immediate value. Prospects see their accounts with intent data and realize the product is real.",
-    ctaTested: "Build your free Target Account List",
-    durationWeeks: 2,
-    successCriteria:
-      "1%+ CTA click rate. 10+ TALs built in first 2 weeks.",
-    defaultScore: 0,
-    startDate: "",
-  },
-  {
-    id: "prop-003c",
-    name: "Homepage CTA — $2K Credit",
-    channel: "accountcast.tv",
-    motion: "product",
-    hypothesis:
-      "A $2,000 campaign credit reduces perceived risk. Prospects feel like they're getting something instead of being sold to.",
-    ctaTested: "Get $2,000 towards your first campaign",
-    durationWeeks: 4,
-    successCriteria:
-      "1%+ CTA click rate (vs. current 0%).",
-    defaultScore: 0,
-    startDate: "",
-  },
-  {
-    id: "prop-003d",
-    name: "Homepage CTA — In-Market Accounts",
-    channel: "accountcast.tv",
-    motion: "product",
-    hypothesis:
-      "Curiosity-driven CTA using intent data. 'Which of your accounts are in-market right now?' is hard to ignore for any Demand Gen leader.",
-    ctaTested: "See which of your accounts are in-market",
-    durationWeeks: 2,
-    successCriteria:
-      "1%+ CTA click rate. Higher engagement time on page.",
-    defaultScore: 0,
-    startDate: "",
-  },
-  {
-    id: "prop-003e",
-    name: "Homepage CTA — Free CTV Audit",
-    channel: "accountcast.tv",
-    motion: "product",
-    hypothesis:
-      "For brands already running CTV, a free audit positions AccountCast as the expert and shows gaps in their current B2B targeting.",
-    ctaTested: "Get a free CTV creative audit",
-    durationWeeks: 2,
-    successCriteria:
-      "1%+ CTA click rate. 3+ audits requested in 2 weeks.",
     defaultScore: 0,
     startDate: "",
   },
