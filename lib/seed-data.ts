@@ -202,7 +202,7 @@ export const CAMPAIGNS: Campaign[] = [
   },
   {
     id: "scott-blast-1",
-    name: "Scott — Email Blast #1",
+    name: "Scott — TIMA Clients #1",
     channel: "Email",
     mode: "Direct",
     motion: "sales",
@@ -227,7 +227,7 @@ export const CAMPAIGNS: Campaign[] = [
   },
   {
     id: "scott-blast-2",
-    name: "Scott — Email Blast #2",
+    name: "Scott — TIMA Clients #2",
     channel: "Email",
     mode: "Direct",
     motion: "sales",
