@@ -455,25 +455,24 @@ export default function Home() {
 
   // Load saved state on mount
   useEffect(() => {
-    const saved = loadProposalsState();
-    if (saved) {
-      // Reorder proposals based on saved order
-      const orderMap = new Map(saved.order.map((id, i) => [id, i]));
-      const sorted = [...PROPOSED_EXPERIMENTS].sort((a, b) => {
-        const ai = orderMap.get(a.id) ?? 999;
-        const bi = orderMap.get(b.id) ?? 999;
-        return ai - bi;
-      });
-      // Add any new proposals not in saved order
-      const savedIds = new Set(saved.order);
-      const newOnes = PROPOSED_EXPERIMENTS.filter(p => !savedIds.has(p.id));
-      setProposals([...sorted.filter(p => savedIds.has(p.id)), ...newOnes].map(p => ({
-        ...p,
-        startDate: saved.dates[p.id] || p.startDate,
-      })));
-      setStatuses(saved.statuses);
-    }
-    setLoaded(true);
+    loadProposalsState().then((saved) => {
+      if (saved) {
+        const orderMap = new Map(saved.order.map((id, i) => [id, i]));
+        const sorted = [...PROPOSED_EXPERIMENTS].sort((a, b) => {
+          const ai = orderMap.get(a.id) ?? 999;
+          const bi = orderMap.get(b.id) ?? 999;
+          return ai - bi;
+        });
+        const savedIds = new Set(saved.order);
+        const newOnes = PROPOSED_EXPERIMENTS.filter(p => !savedIds.has(p.id));
+        setProposals([...sorted.filter(p => savedIds.has(p.id)), ...newOnes].map(p => ({
+          ...p,
+          startDate: saved.dates[p.id] || p.startDate,
+        })));
+        setStatuses(saved.statuses);
+      }
+      setLoaded(true);
+    });
   }, []);
 
   // Save state on every change (after initial load)

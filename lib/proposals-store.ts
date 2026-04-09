@@ -1,16 +1,38 @@
-// Proposals state storage
-// Currently uses localStorage. When Vercel KV is set up,
-// swap to KV by changing the load/save functions below.
-
 export interface ProposalsState {
   order: string[];
   statuses: Record<string, "approved" | "postponed" | "cancelled" | null>;
   dates: Record<string, string>;
 }
 
+export async function loadProposalsState(): Promise<ProposalsState | null> {
+  try {
+    const res = await fetch("/api/proposals");
+    if (!res.ok) return loadFromLocalStorage();
+    const data = await res.json();
+    return data || loadFromLocalStorage();
+  } catch {
+    return loadFromLocalStorage();
+  }
+}
+
+export async function saveProposalsState(state: ProposalsState): Promise<void> {
+  // Save to both Redis and localStorage
+  saveToLocalStorage(state);
+  try {
+    await fetch("/api/proposals", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(state),
+    });
+  } catch {
+    // Silently fall back to localStorage only
+  }
+}
+
+// localStorage fallback
 const STORAGE_KEY = "accountcast-proposals-state";
 
-export function loadProposalsState(): ProposalsState | null {
+function loadFromLocalStorage(): ProposalsState | null {
   if (typeof window === "undefined") return null;
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -21,7 +43,7 @@ export function loadProposalsState(): ProposalsState | null {
   }
 }
 
-export function saveProposalsState(state: ProposalsState): void {
+function saveToLocalStorage(state: ProposalsState): void {
   if (typeof window === "undefined") return;
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
