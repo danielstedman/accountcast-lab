@@ -1,8 +1,10 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback, forwardRef } from "react";
 import { CAMPAIGNS, PROPOSED_EXPERIMENTS } from "@/lib/seed-data";
 import { Campaign, Confidence, Motion, ProposedExperiment } from "@/lib/types";
+import { DragDropContext, Droppable, Draggable, DropResult } from "@hello-pangea/dnd";
+import { loadProposalsState, saveProposalsState } from "@/lib/proposals-store";
 
 interface PipelineStage {
   id: number;
@@ -231,47 +233,50 @@ function SortIcon({ column, current, dir }: { column: SortKey; current: SortKey 
   return <span className="text-accent ml-1">{dir === "asc" ? "\u2191" : "\u2193"}</span>;
 }
 
-function ProposalRow({ proposal, index, total, onDateChange, onMove, onApprove, approved }: {
+type ProposalStatus = "approved" | "postponed" | "cancelled" | null;
+
+const STATUS_CONFIG: Record<string, { label: string; bg: string; text: string; rowBg: string }> = {
+  approved: { label: "Go!", bg: "bg-emerald-100", text: "text-emerald-700", rowBg: "bg-emerald-50/50" },
+  postponed: { label: "Later", bg: "bg-amber-100", text: "text-amber-700", rowBg: "bg-amber-50/30" },
+  cancelled: { label: "No", bg: "bg-red-100", text: "text-red-600", rowBg: "bg-red-50/30" },
+};
+
+const ProposalRow = forwardRef<HTMLTableRowElement, {
   proposal: ProposedExperiment;
-  index: number;
-  total: number;
+  status: ProposalStatus;
   onDateChange: (id: string, date: string) => void;
-  onMove: (id: string, direction: "up" | "down") => void;
-  onApprove: (id: string) => void;
-  approved: boolean;
-}) {
+  onStatusChange: (id: string, status: ProposalStatus) => void;
+  dragHandleProps?: Record<string, unknown>;
+  draggableProps?: Record<string, unknown>;
+}>(function ProposalRow({ proposal, status, onDateChange, onStatusChange, dragHandleProps, draggableProps }, ref) {
   const p = proposal;
   const [open, setOpen] = useState(false);
+  const isCancelled = status === "cancelled";
 
   return (
     <>
       <tr
-        className={`border-b border-border hover:bg-zinc-50 transition-colors ${open ? "bg-zinc-50" : ""} ${approved ? "bg-emerald-50/50" : ""}`}
+        ref={ref}
+        {...(draggableProps || {})}
+        className={`border-b border-border hover:bg-zinc-50 transition-colors ${open ? "bg-zinc-50" : ""} ${status ? STATUS_CONFIG[status].rowBg : ""}`}
       >
-        <td className="py-3 px-2">
-          <div className="flex flex-col items-center gap-0.5">
-            <button
-              onClick={() => onMove(p.id, "up")}
-              disabled={index === 0}
-              className={`text-xs px-1 rounded hover:bg-zinc-200 transition-colors ${index === 0 ? "text-zinc-200 cursor-default" : "text-zinc-500"}`}
-            >{"\u25B2"}</button>
-            <button
-              onClick={() => onMove(p.id, "down")}
-              disabled={index === total - 1}
-              className={`text-xs px-1 rounded hover:bg-zinc-200 transition-colors ${index === total - 1 ? "text-zinc-200 cursor-default" : "text-zinc-500"}`}
-            >{"\u25BC"}</button>
-          </div>
+        <td className="py-3 px-2" {...(dragHandleProps || {})}>
+          <span className="text-zinc-400 cursor-grab text-sm">{"\u2261"}</span>
         </td>
         <td className="py-3 pr-4 cursor-pointer" onClick={() => setOpen(!open)}>
           <div className="flex items-center gap-2">
-            {approved && <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 flex-shrink-0" title="Approved" />}
-            <div className={`font-medium text-sm ${approved ? "text-emerald-700" : "text-foreground"}`}>{p.name}</div>
-            <MotionBadge motion={p.motion} />
+            {status && (
+              <span className={`px-1.5 py-0.5 rounded text-[10px] font-semibold ${STATUS_CONFIG[status].bg} ${STATUS_CONFIG[status].text}`}>
+                {STATUS_CONFIG[status].label}
+              </span>
+            )}
+            <div className={`font-medium text-sm ${isCancelled ? "line-through text-zinc-400" : status === "approved" ? "text-emerald-700" : "text-foreground"}`}>{p.name}</div>
+            <span className={isCancelled ? "opacity-50" : ""}><MotionBadge motion={p.motion} /></span>
           </div>
           <div className="text-xs text-muted">{p.channel} {"\u00B7"} {p.durationWeeks} week{p.durationWeeks > 1 ? "s" : ""}</div>
         </td>
         <td className="py-3 pr-4 text-sm text-muted cursor-pointer hidden lg:table-cell" onClick={() => setOpen(!open)}>
-          {p.ctaTested}
+          <span className={isCancelled ? "line-through text-zinc-300" : ""}>{p.ctaTested}</span>
         </td>
         <td className="py-3 pr-4 hidden lg:table-cell">
           <input
@@ -284,16 +289,29 @@ function ProposalRow({ proposal, index, total, onDateChange, onMove, onApprove, 
           />
         </td>
         <td className="py-3 pr-4">
-          <button
-            onClick={() => onApprove(p.id)}
-            className={`px-2 py-1 text-xs font-medium rounded-md transition-colors ${
-              approved
-                ? "bg-emerald-100 text-emerald-700 hover:bg-emerald-200"
-                : "bg-zinc-100 text-zinc-500 hover:bg-emerald-50 hover:text-emerald-600"
-            }`}
-          >
-            {approved ? "Go!" : "Approve"}
-          </button>
+          <div className="flex items-center gap-1">
+            <button
+              onClick={() => onStatusChange(p.id, status === "approved" ? null : "approved")}
+              className={`px-1.5 py-1 text-xs rounded transition-colors ${
+                status === "approved" ? "bg-emerald-200 text-emerald-800" : "bg-zinc-100 text-zinc-400 hover:bg-emerald-50 hover:text-emerald-600"
+              }`}
+              title="Approve"
+            >{"\u2714"}</button>
+            <button
+              onClick={() => onStatusChange(p.id, status === "postponed" ? null : "postponed")}
+              className={`px-1.5 py-1 text-xs rounded transition-colors ${
+                status === "postponed" ? "bg-amber-200 text-amber-800" : "bg-zinc-100 text-zinc-400 hover:bg-amber-50 hover:text-amber-600"
+              }`}
+              title="Postpone"
+            >{"\u23F8"}</button>
+            <button
+              onClick={() => onStatusChange(p.id, status === "cancelled" ? null : "cancelled")}
+              className={`px-1.5 py-1 text-xs rounded transition-colors ${
+                status === "cancelled" ? "bg-red-200 text-red-800" : "bg-zinc-100 text-zinc-400 hover:bg-red-50 hover:text-red-600"
+              }`}
+              title="Cancel"
+            >{"\u2716"}</button>
+          </div>
         </td>
       </tr>
       {open && (
@@ -319,7 +337,7 @@ function ProposalRow({ proposal, index, total, onDateChange, onMove, onApprove, 
       )}
     </>
   );
-}
+});
 
 function TamAccountRow({ account }: { account: TamData["touchedAccounts"][0] }) {
   const [open, setOpen] = useState(false);
@@ -432,7 +450,45 @@ export default function Home() {
   const [sortKey, setSortKey] = useState<SortKey | null>(null);
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [proposals, setProposals] = useState(PROPOSED_EXPERIMENTS);
-  const [approvedIds, setApprovedIds] = useState<Set<string>>(new Set());
+  const [statuses, setStatuses] = useState<Record<string, ProposalStatus>>({});
+  const [loaded, setLoaded] = useState(false);
+
+  // Load saved state on mount
+  useEffect(() => {
+    const saved = loadProposalsState();
+    if (saved) {
+      // Reorder proposals based on saved order
+      const orderMap = new Map(saved.order.map((id, i) => [id, i]));
+      const sorted = [...PROPOSED_EXPERIMENTS].sort((a, b) => {
+        const ai = orderMap.get(a.id) ?? 999;
+        const bi = orderMap.get(b.id) ?? 999;
+        return ai - bi;
+      });
+      // Add any new proposals not in saved order
+      const savedIds = new Set(saved.order);
+      const newOnes = PROPOSED_EXPERIMENTS.filter(p => !savedIds.has(p.id));
+      setProposals([...sorted.filter(p => savedIds.has(p.id)), ...newOnes].map(p => ({
+        ...p,
+        startDate: saved.dates[p.id] || p.startDate,
+      })));
+      setStatuses(saved.statuses);
+    }
+    setLoaded(true);
+  }, []);
+
+  // Save state on every change (after initial load)
+  const persistState = useCallback(() => {
+    if (!loaded) return;
+    saveProposalsState({
+      order: proposals.map(p => p.id),
+      statuses,
+      dates: Object.fromEntries(proposals.map(p => [p.id, p.startDate])),
+    });
+  }, [proposals, statuses, loaded]);
+
+  useEffect(() => {
+    persistState();
+  }, [persistState]);
   const [pipeline, setPipeline] = useState<PipelineData | null>(null);
   const [lemlistData, setLemlistData] = useState<LemlistCampaign[] | null>(null);
   const [tamData, setTamData] = useState<TamData | null>(null);
@@ -776,41 +832,42 @@ export default function Home() {
                   <th className="py-2.5 pr-4 text-center font-medium">Status</th>
                 </tr>
               </thead>
-              <tbody>
-                {proposals.map((p, i) => (
-                  <ProposalRow
-                    key={p.id}
-                    proposal={p}
-                    index={i}
-                    total={proposals.length}
-                    approved={approvedIds.has(p.id)}
-                    onDateChange={(id, date) =>
-                      setProposals((prev) =>
-                        prev.map((x) => (x.id === id ? { ...x, startDate: date } : x))
-                      )
-                    }
-                    onMove={(id, dir) => {
-                      setProposals((prev) => {
-                        const idx = prev.findIndex((x) => x.id === id);
-                        if (idx < 0) return prev;
-                        const next = [...prev];
-                        const swap = dir === "up" ? idx - 1 : idx + 1;
-                        if (swap < 0 || swap >= next.length) return prev;
-                        [next[idx], next[swap]] = [next[swap], next[idx]];
-                        return next;
-                      });
-                    }}
-                    onApprove={(id) => {
-                      setApprovedIds((prev) => {
-                        const next = new Set(prev);
-                        if (next.has(id)) next.delete(id);
-                        else next.add(id);
-                        return next;
-                      });
-                    }}
-                  />
-                ))}
-              </tbody>
+              <DragDropContext onDragEnd={(result: DropResult) => {
+                if (!result.destination) return;
+                const items = [...proposals];
+                const [moved] = items.splice(result.source.index, 1);
+                items.splice(result.destination.index, 0, moved);
+                setProposals(items);
+              }}>
+                <Droppable droppableId="proposals">
+                  {(provided) => (
+                    <tbody ref={provided.innerRef} {...provided.droppableProps}>
+                      {proposals.map((p, i) => (
+                        <Draggable key={p.id} draggableId={p.id} index={i}>
+                          {(dragProvided) => (
+                            <ProposalRow
+                              proposal={p}
+                              status={statuses[p.id] || null}
+                              draggableProps={dragProvided.draggableProps as unknown as Record<string, unknown>}
+                              dragHandleProps={dragProvided.dragHandleProps as unknown as Record<string, unknown>}
+                              onDateChange={(id, date) =>
+                                setProposals((prev) =>
+                                  prev.map((x) => (x.id === id ? { ...x, startDate: date } : x))
+                                )
+                              }
+                              onStatusChange={(id, s) =>
+                                setStatuses((prev) => ({ ...prev, [id]: s }))
+                              }
+                              ref={dragProvided.innerRef}
+                            />
+                          )}
+                        </Draggable>
+                      ))}
+                      {provided.placeholder}
+                    </tbody>
+                  )}
+                </Droppable>
+              </DragDropContext>
             </table>
           </div>
           <p className="text-xs text-zinc-400 mt-3">
