@@ -342,7 +342,7 @@ export default function Home() {
     };
     return CAMPAIGNS.map((camp) => {
       const live = lemlistMap[camp.id];
-      if (!live || live.sent === 0) return camp;
+      if (!live || (live.sent === 0 && live.opened === 0 && live.replied === 0)) return camp;
       const openRate = live.sent > 0 ? `${Math.round((live.opened / live.sent) * 100)}%` : "0%";
       const replyRate = live.sent > 0 ? `${((live.replied / live.sent) * 100).toFixed(1)}%` : "0%";
       return {
