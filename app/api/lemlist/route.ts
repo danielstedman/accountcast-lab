@@ -71,7 +71,30 @@ export async function GET() {
     return NextResponse.json({ error: "No Lemlist API key configured" }, { status: 500 });
   }
 
+  // Debug: test a single raw fetch to verify auth works
+  const testRes = await fetch(`${BASE_URL}/activities?campaignId=cam_BNmQsFaGTLY3yXkXF&limit=1`, {
+    headers: authHeader(token),
+    cache: "no-store",
+  });
+  const testStatus = testRes.status;
+  let testBody: string;
+  try {
+    testBody = await testRes.text();
+  } catch {
+    testBody = "failed to read";
+  }
+
   const campaigns: CampaignStats[] = [];
+
+  // If auth is failing, return debug info
+  if (testStatus !== 200) {
+    return NextResponse.json({
+      error: "Lemlist auth failed",
+      status: testStatus,
+      body: testBody.substring(0, 200),
+      tokenPrefix: token.substring(0, 6),
+    }, { status: 502 });
+  }
 
   for (const [id, name] of Object.entries(ACCOUNTCAST_CAMPAIGNS)) {
     let status = "unknown";
