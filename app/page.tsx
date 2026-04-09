@@ -230,29 +230,49 @@ function SortIcon({ column, current, dir }: { column: SortKey; current: SortKey 
   return <span className="text-accent ml-1">{dir === "asc" ? "\u2191" : "\u2193"}</span>;
 }
 
-function ProposalRow({ proposal, onDateChange }: { proposal: ProposedExperiment; onDateChange: (id: string, date: string) => void }) {
+function ProposalRow({ proposal, index, total, onDateChange, onMove, onApprove, approved }: {
+  proposal: ProposedExperiment;
+  index: number;
+  total: number;
+  onDateChange: (id: string, date: string) => void;
+  onMove: (id: string, direction: "up" | "down") => void;
+  onApprove: (id: string) => void;
+  approved: boolean;
+}) {
   const p = proposal;
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <tr
-        className={`border-b border-border hover:bg-zinc-50 transition-colors ${open ? "bg-zinc-50" : ""}`}
+        className={`border-b border-border hover:bg-zinc-50 transition-colors ${open ? "bg-zinc-50" : ""} ${approved ? "bg-emerald-50/50" : ""}`}
       >
-        <td className="py-3 px-4 cursor-pointer" onClick={() => setOpen(!open)}>
-          <span className="text-zinc-400 text-sm">{open ? "\u25BE" : "\u25B8"}</span>
+        <td className="py-3 px-2">
+          <div className="flex flex-col items-center gap-0.5">
+            <button
+              onClick={() => onMove(p.id, "up")}
+              disabled={index === 0}
+              className={`text-xs px-1 rounded hover:bg-zinc-200 transition-colors ${index === 0 ? "text-zinc-200 cursor-default" : "text-zinc-500"}`}
+            >{"\u25B2"}</button>
+            <button
+              onClick={() => onMove(p.id, "down")}
+              disabled={index === total - 1}
+              className={`text-xs px-1 rounded hover:bg-zinc-200 transition-colors ${index === total - 1 ? "text-zinc-200 cursor-default" : "text-zinc-500"}`}
+            >{"\u25BC"}</button>
+          </div>
         </td>
         <td className="py-3 pr-4 cursor-pointer" onClick={() => setOpen(!open)}>
           <div className="flex items-center gap-2">
-            <div className="font-medium text-sm text-foreground">{p.name}</div>
+            {approved && <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 flex-shrink-0" title="Approved" />}
+            <div className={`font-medium text-sm ${approved ? "text-emerald-700" : "text-foreground"}`}>{p.name}</div>
             <MotionBadge motion={p.motion} />
           </div>
           <div className="text-xs text-muted">{p.channel} {"\u00B7"} {p.durationWeeks} week{p.durationWeeks > 1 ? "s" : ""}</div>
         </td>
-        <td className="py-3 pr-4 text-sm text-muted cursor-pointer hidden lg:table-cell" colSpan={2} onClick={() => setOpen(!open)}>
+        <td className="py-3 pr-4 text-sm text-muted cursor-pointer hidden lg:table-cell" onClick={() => setOpen(!open)}>
           {p.ctaTested}
         </td>
-        <td className="py-3 pr-4 hidden lg:table-cell" colSpan={2}>
+        <td className="py-3 pr-4 hidden lg:table-cell">
           <input
             type="date"
             value={p.startDate}
@@ -261,6 +281,18 @@ function ProposalRow({ proposal, onDateChange }: { proposal: ProposedExperiment;
               p.startDate ? "text-foreground" : "text-zinc-400"
             }`}
           />
+        </td>
+        <td className="py-3 pr-4">
+          <button
+            onClick={() => onApprove(p.id)}
+            className={`px-2 py-1 text-xs font-medium rounded-md transition-colors ${
+              approved
+                ? "bg-emerald-100 text-emerald-700 hover:bg-emerald-200"
+                : "bg-zinc-100 text-zinc-500 hover:bg-emerald-50 hover:text-emerald-600"
+            }`}
+          >
+            {approved ? "Go!" : "Approve"}
+          </button>
         </td>
       </tr>
       {open && (
@@ -332,6 +364,7 @@ export default function Home() {
   const [sortKey, setSortKey] = useState<SortKey | null>(null);
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [proposals, setProposals] = useState(PROPOSED_EXPERIMENTS);
+  const [approvedIds, setApprovedIds] = useState<Set<string>>(new Set());
   const [pipeline, setPipeline] = useState<PipelineData | null>(null);
   const [lemlistData, setLemlistData] = useState<LemlistCampaign[] | null>(null);
   const [tamData, setTamData] = useState<TamData | null>(null);
@@ -670,20 +703,43 @@ export default function Home() {
                 <tr className="bg-zinc-50 border-b border-border text-xs text-muted uppercase tracking-wider">
                   <th className="w-8 py-2.5 px-4"></th>
                   <th className="py-2.5 pr-4 text-left font-medium">Experiment</th>
-                  <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell" colSpan={2}>CTA to test</th>
-                  <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell" colSpan={2}>Start date</th>
+                  <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell">CTA to test</th>
+                  <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell">Start date</th>
+                  <th className="py-2.5 pr-4 text-center font-medium">Status</th>
                 </tr>
               </thead>
               <tbody>
-                {proposals.map((p) => (
+                {proposals.map((p, i) => (
                   <ProposalRow
                     key={p.id}
                     proposal={p}
+                    index={i}
+                    total={proposals.length}
+                    approved={approvedIds.has(p.id)}
                     onDateChange={(id, date) =>
                       setProposals((prev) =>
                         prev.map((x) => (x.id === id ? { ...x, startDate: date } : x))
                       )
                     }
+                    onMove={(id, dir) => {
+                      setProposals((prev) => {
+                        const idx = prev.findIndex((x) => x.id === id);
+                        if (idx < 0) return prev;
+                        const next = [...prev];
+                        const swap = dir === "up" ? idx - 1 : idx + 1;
+                        if (swap < 0 || swap >= next.length) return prev;
+                        [next[idx], next[swap]] = [next[swap], next[idx]];
+                        return next;
+                      });
+                    }}
+                    onApprove={(id) => {
+                      setApprovedIds((prev) => {
+                        const next = new Set(prev);
+                        if (next.has(id)) next.delete(id);
+                        else next.add(id);
+                        return next;
+                      });
+                    }}
                   />
                 ))}
               </tbody>

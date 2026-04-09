@@ -1,0 +1,1481 @@
+[
+  {
+    "company": "SailPoint, Inc.",
+    "domain": "sailpoint.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 4
+  },
+  {
+    "company": "Docusign, Inc.",
+    "domain": "docusign.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 4
+  },
+  {
+    "company": "Genesys (Genesys Telecommunications Laboratories, Inc.)",
+    "domain": "genesys.com",
+    "industry": "Wholesalers",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 4
+  },
+  {
+    "company": "Cloudera, Inc.",
+    "domain": "cloudera.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3
+  },
+  {
+    "company": "Databricks",
+    "domain": "databricks.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3
+  },
+  {
+    "company": "Iterable",
+    "domain": "iterable.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3
+  },
+  {
+    "company": "Splunk Inc.",
+    "domain": "splunk.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3
+  },
+  {
+    "company": "8x8, Inc.",
+    "domain": "8x8.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3
+  },
+  {
+    "company": "RingCentral, Inc.",
+    "domain": "ringcentral.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3
+  },
+  {
+    "company": "Qlik",
+    "domain": "qlik.com",
+    "industry": "Business Services",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3
+  },
+  {
+    "company": "Workiva Inc.",
+    "domain": "workiva.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3
+  },
+  {
+    "company": "Pegasystems Inc.",
+    "domain": "pega.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3
+  },
+  {
+    "company": "BlackLine, Inc.",
+    "domain": "blackline.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3
+  },
+  {
+    "company": "SHI International Corp.",
+    "domain": "shi.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Tableau",
+    "domain": "tableau.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Citrix Systems, Inc.",
+    "domain": "citrix.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Dropbox, Inc.",
+    "domain": "dropbox.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Perficient, Inc.",
+    "domain": "perficient.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Zendesk, Inc.",
+    "domain": "zendesk.com",
+    "industry": "Business Services",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Zillow Group, Inc.",
+    "domain": "zillowgroup.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Dynatrace, Inc.",
+    "domain": "dynatrace.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Cvent",
+    "domain": "cvent.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Appviewx",
+    "domain": "appviewx.com",
+    "industry": "Manufacturing",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Snowflake Inc.",
+    "domain": "snowflake.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "F5 Networks, Inc.",
+    "domain": "f5.com",
+    "industry": "Telecommunications",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Athenahealth",
+    "domain": "athenahealth.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Getty Images Holdings, Inc.",
+    "domain": "gettyimages.com",
+    "industry": "Business Services",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "11:11 Systems, Inc.",
+    "domain": "1111systems.com",
+    "industry": "Business Services",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Hitachi Vantara",
+    "domain": "hitachivantara.com",
+    "industry": "Manufacturing",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "ACI Worldwide, Inc.",
+    "domain": "aciworldwide.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Fico",
+    "domain": "fico.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Waters Corporation",
+    "domain": "waters.com",
+    "industry": "Manufacturing",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Guardian Industries",
+    "domain": "guardian.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Avid Technology, Inc.",
+    "domain": "avid.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Radancy",
+    "domain": "radancy.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Square Inc",
+    "domain": "squareup.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Esri",
+    "domain": "esri.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Extreme Networks, Inc.",
+    "domain": "extremenetworks.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Cars.com",
+    "domain": "cars.com",
+    "industry": "Business Services",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Edmunds",
+    "domain": "edmunds.com",
+    "industry": "Manufacturing",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Epicor Software Corporation",
+    "domain": "epicor.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Commvault Systems, Inc.",
+    "domain": "commvault.com",
+    "industry": "Transportation & Travel",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Toast, Inc",
+    "domain": "toasttab.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Xactly Corp",
+    "domain": "xactlycorp.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Klaviyo, Inc.",
+    "domain": "klaviyo.com",
+    "industry": "Wholesalers",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Hyland Software, Inc.",
+    "domain": "hyland.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Vertex, Inc.",
+    "domain": "vertexinc.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "KnowBe4",
+    "domain": "knowbe4.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Zuora, Inc.",
+    "domain": "zuora.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Smartsheet Inc.",
+    "domain": "smartsheet.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "UiPath Inc.",
+    "domain": "uipath.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Box, Inc.",
+    "domain": "box.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Zscaler, Inc.",
+    "domain": "zscaler.com",
+    "industry": "Manufacturing",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Sciencelogic",
+    "domain": "sciencelogic.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Sovos Compliance, LLC",
+    "domain": "sovos.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Optimizely",
+    "domain": "optimizely.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Braze, Inc.",
+    "domain": "braze.com",
+    "industry": "Finance",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Collibra",
+    "domain": "collibra.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Jitterbit",
+    "domain": "jitterbit.com",
+    "industry": "Software",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Airtable",
+    "domain": "airtable.com",
+    "industry": "Telecommunications",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Bubble",
+    "domain": "bubble.io",
+    "industry": "Software",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Digitate",
+    "domain": "digitate.com",
+    "industry": "Software",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Clickup",
+    "domain": "clickup.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2
+  },
+  {
+    "company": "Equitable Holdings, Inc.",
+    "domain": "equitable.com",
+    "industry": "Finance",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Presidio Inc",
+    "domain": "presidio.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Airbnb, Inc.",
+    "domain": "airbnb.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Bazaarvoice, Inc.",
+    "domain": "bazaarvoice.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Rimini Street, Inc.",
+    "domain": "riministreet.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Naviga",
+    "domain": "navigaglobal.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Veeva Systems Inc.",
+    "domain": "veeva.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Epsilon",
+    "domain": "epsilon.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Verint",
+    "domain": "verint.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Applied Systems",
+    "domain": "appliedsystems.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Qualtrics, LLC",
+    "domain": "qualtrics.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Medallia, Inc.",
+    "domain": "medallia.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "R&R Partners",
+    "domain": "rrpartners.com",
+    "industry": "Business Services",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Blue Yonder",
+    "domain": "blueyonder.com",
+    "industry": "Finance",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Vertafore",
+    "domain": "vertafore.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Proofpoint, Inc.",
+    "domain": "proofpoint.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Avi-Spl",
+    "domain": "avispl.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Csg",
+    "domain": "csgi.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Tyler Technologies, Inc.",
+    "domain": "tylertech.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Skillsoft Corp.",
+    "domain": "skillsoft.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Pyramid Consulting, Inc.",
+    "domain": "pyramidci.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Guidewire Software, Inc.",
+    "domain": "guidewire.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "ZoomInfo",
+    "domain": "zoominfo.com",
+    "industry": "Business Services",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "ManTech International Corporation",
+    "domain": "mantech.com",
+    "industry": "Manufacturing",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Sonicwall",
+    "domain": "sonicwall.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Dodge Data & Analytics",
+    "domain": "construction.com",
+    "industry": "Telecommunications",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Butterball, LLC",
+    "domain": "butterball.com",
+    "industry": "Manufacturing",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Liveramp",
+    "domain": "liveramp.com",
+    "industry": "Business Services",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Dataminr",
+    "domain": "dataminr.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Eversana",
+    "domain": "eversana.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Qualys",
+    "domain": "qualys.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "DataBank Holdings, Ltd.",
+    "domain": "databank.com",
+    "industry": "Business Services",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Glassdoor, Inc",
+    "domain": "glassdoor.com",
+    "industry": "Telecommunications",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Cradlepoint",
+    "domain": "cradlepoint.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Manhattan Associates, Inc.",
+    "domain": "manh.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Tierpoint",
+    "domain": "tierpoint.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Sharecare, Inc.",
+    "domain": "sharecare.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "SolarWinds Corporation",
+    "domain": "solarwinds.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Mavenir",
+    "domain": "mavenir.com",
+    "industry": "Telecommunications",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Zynga Inc.",
+    "domain": "zynga.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Data Axle, Inc",
+    "domain": "data-axle.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Mailchimp",
+    "domain": "mailchimp.com",
+    "industry": "Business Services",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Magnite, Inc.",
+    "domain": "magnite.com",
+    "industry": "Business Services",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Technologyadvice",
+    "domain": "technologyadvice.com",
+    "industry": "Telecommunications",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Nutanix, Inc.",
+    "domain": "nutanix.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Okta, Inc.",
+    "domain": "okta.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Rubrik, Inc.",
+    "domain": "rubrik.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Grammarly",
+    "domain": "grammarly.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "New Relic, Inc.",
+    "domain": "newrelic.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Instructure",
+    "domain": "instructure.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Pipedrive: In Pipeline"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Rippling People Center Inc.",
+    "domain": "rippling.com",
+    "industry": "Business Services",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "InterSystems Corporation",
+    "domain": "intersystems.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Carta",
+    "domain": "carta.com",
+    "industry": "Finance",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "CrowdStrike Holdings, Inc.",
+    "domain": "crowdstrike.com",
+    "industry": "Manufacturing",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Alteryx, Inc.",
+    "domain": "alteryx.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Datadog, Inc.",
+    "domain": "datadoghq.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Nasuni",
+    "domain": "nasuni.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "PagerDuty, Inc.",
+    "domain": "pagerduty.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "SalesLoft",
+    "domain": "salesloft.com",
+    "industry": "Software",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Domo, Inc.",
+    "domain": "domo.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Webflow",
+    "domain": "webflow.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Medusind",
+    "domain": "medusind.com",
+    "industry": "Healthcare",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Rapid7, Inc.",
+    "domain": "rapid7.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Varonis",
+    "domain": "varonis.com",
+    "industry": "Transportation & Travel",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Sugarcrm",
+    "domain": "sugarcrm.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Orca Security",
+    "domain": "orca.security",
+    "industry": "Manufacturing",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Tenable",
+    "domain": "tenable.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "UserTesting",
+    "domain": "usertesting.com",
+    "industry": "Software",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Flexera",
+    "domain": "flexera.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Amplitude, Inc.",
+    "domain": "amplitude.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Gigamon",
+    "domain": "gigamon.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Anthropic",
+    "domain": "anthropic.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "SentinelOne, Inc.",
+    "domain": "sentinelone.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Icertis",
+    "domain": "icertis.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Salsify",
+    "domain": "salsify.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Litera",
+    "domain": "litera.com",
+    "industry": "Finance",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  },
+  {
+    "company": "Chargebee",
+    "domain": "chargebee.com",
+    "industry": "Finance",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1
+  }
+]
