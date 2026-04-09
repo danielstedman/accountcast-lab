@@ -199,8 +199,8 @@ export const CAMPAIGNS: Campaign[] = [
     replies: "n/a",
     conversion: "0%",
     meetings: 0,
-    pmfScore: 5,
-    pmfNote: "550 accounts reached, 47K impressions, but 0 clicks (0% CTR). High completion rate (97%) means people watch the full ad but don't click through.",
+    pmfScore: null,
+    pmfNote: "Can't measure PMF directly from CTV. 550 accounts reached with 97% video completion — engagement is high but no way to track if it drives meetings yet.",
     confidence: "high",
     confidenceNote: "Data from Bombora B2beacon / Trade Desk dashboard. Fully tracked.",
     details: [
