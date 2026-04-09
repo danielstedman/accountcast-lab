@@ -31,6 +31,7 @@ interface TamData {
     size: string;
     channels: string[];
     touchCount: number;
+    contacts?: { name: string; email: string; campaign: string; sent: boolean; opened: boolean; replied: boolean }[];
   }[];
 }
 
@@ -312,6 +313,73 @@ function ProposalRow({ proposal, index, total, onDateChange, onMove, onApprove, 
                   <p className="text-sm text-zinc-600 mt-0.5">{p.successCriteria}</p>
                 </div>
               )}
+            </div>
+          </td>
+        </tr>
+      )}
+    </>
+  );
+}
+
+function TamAccountRow({ account }: { account: TamData["touchedAccounts"][0] }) {
+  const [open, setOpen] = useState(false);
+  const a = account;
+
+  return (
+    <>
+      <tr
+        onClick={() => setOpen(!open)}
+        className={`border-b border-border hover:bg-zinc-50 cursor-pointer transition-colors ${open ? "bg-zinc-50" : ""}`}
+      >
+        <td className="py-2.5 px-4">
+          <span className="text-zinc-400 text-sm">{open ? "\u25BE" : "\u25B8"}</span>
+        </td>
+        <td className="py-2.5 pr-4">
+          <div className="font-medium text-sm text-foreground">{a.company}</div>
+          <div className="text-xs text-muted">{a.domain}</div>
+        </td>
+        <td className="py-2.5 pr-4 text-xs text-muted hidden lg:table-cell">{a.industry}</td>
+        <td className="py-2.5 pr-4 text-center">
+          <span className={`text-sm font-mono font-semibold ${
+            a.touchCount >= 3 ? "text-emerald-600" : a.touchCount >= 2 ? "text-accent" : "text-foreground"
+          }`}>
+            {a.touchCount}
+          </span>
+        </td>
+        <td className="py-2.5 pr-4">
+          <div className="flex flex-wrap gap-1">
+            {a.channels.map((ch) => (
+              <span key={ch} className="px-1.5 py-0.5 text-[10px] rounded bg-zinc-100 text-muted">
+                {ch}
+              </span>
+            ))}
+          </div>
+        </td>
+      </tr>
+      {open && a.contacts && a.contacts.length > 0 && (
+        <tr className="border-b border-border bg-zinc-50">
+          <td></td>
+          <td colSpan={4} className="py-3 pr-6">
+            <div className="text-xs font-medium text-muted uppercase tracking-wider mb-2">
+              Contacts reached at {a.company}
+            </div>
+            <div className="space-y-1">
+              {a.contacts.map((c, i) => (
+                <div key={i} className="flex items-center justify-between text-xs py-1.5 border-b border-zinc-200/60 last:border-0">
+                  <div>
+                    <span className="font-medium text-foreground">{c.name}</span>
+                    <span className="text-muted ml-2">{c.email}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-muted">{c.campaign}</span>
+                    <span className="flex gap-1">
+                      {c.sent && <span className="px-1.5 py-0.5 rounded bg-blue-50 text-blue-600 text-[10px]">Sent</span>}
+                      {c.opened && <span className="px-1.5 py-0.5 rounded bg-amber-50 text-amber-600 text-[10px]">Opened</span>}
+                      {c.replied && <span className="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-600 text-[10px]">Replied</span>}
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
           </td>
         </tr>
@@ -809,39 +877,16 @@ export default function Home() {
                 <table className="w-full">
                   <thead>
                     <tr className="bg-zinc-50 border-b border-border text-xs text-muted uppercase tracking-wider">
-                      <th className="py-2.5 px-4 text-left font-medium">Account</th>
+                      <th className="w-8 py-2.5 px-4"></th>
+                      <th className="py-2.5 pr-4 text-left font-medium">Account</th>
                       <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell">Industry</th>
-                      <th className="py-2.5 pr-4 text-left font-medium hidden lg:table-cell">Size</th>
                       <th className="py-2.5 pr-4 text-center font-medium">Touches</th>
                       <th className="py-2.5 pr-4 text-left font-medium">Channels</th>
                     </tr>
                   </thead>
                   <tbody>
                     {tamData.touchedAccounts.map((a) => (
-                      <tr key={a.domain} className="border-b border-border hover:bg-zinc-50 transition-colors">
-                        <td className="py-2.5 px-4">
-                          <div className="font-medium text-sm text-foreground">{a.company}</div>
-                          <div className="text-xs text-muted">{a.domain}</div>
-                        </td>
-                        <td className="py-2.5 pr-4 text-xs text-muted hidden lg:table-cell">{a.industry}</td>
-                        <td className="py-2.5 pr-4 text-xs text-muted hidden lg:table-cell">{a.size}</td>
-                        <td className="py-2.5 pr-4 text-center">
-                          <span className={`text-sm font-mono font-semibold ${
-                            a.touchCount >= 3 ? "text-emerald-600" : a.touchCount >= 2 ? "text-accent" : "text-foreground"
-                          }`}>
-                            {a.touchCount}
-                          </span>
-                        </td>
-                        <td className="py-2.5 pr-4">
-                          <div className="flex flex-wrap gap-1">
-                            {a.channels.map((ch) => (
-                              <span key={ch} className="px-1.5 py-0.5 text-[10px] rounded bg-zinc-100 text-muted">
-                                {ch}
-                              </span>
-                            ))}
-                          </div>
-                        </td>
-                      </tr>
+                      <TamAccountRow key={a.domain} account={a} />
                     ))}
                   </tbody>
                 </table>

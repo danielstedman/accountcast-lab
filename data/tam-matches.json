@@ -10,7 +10,41 @@
       "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 4
+    "touchCount": 4,
+    "contacts": [
+      {
+        "name": "Emilie Sibille",
+        "email": "emilie.sibille@sailpoint.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Emilie Sibille",
+        "email": "emilie.sibille@sailpoint.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      },
+      {
+        "name": "Wendy Wu",
+        "email": "wendy.wu@sailpoint.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Wendy Wu",
+        "email": "wendy.wu@sailpoint.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Docusign, Inc.",
@@ -23,7 +57,41 @@
       "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 4
+    "touchCount": 4,
+    "contacts": [
+      {
+        "name": "Danila Di Nicola",
+        "email": "danila.dinicola@docusign.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Danila Di Nicola",
+        "email": "danila.dinicola@docusign.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      },
+      {
+        "name": "Jamie Bothwell",
+        "email": "jamie.bothwell@docusign.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Jamie Bothwell",
+        "email": "jamie.bothwell@docusign.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Genesys (Genesys Telecommunications Laboratories, Inc.)",
@@ -36,67 +104,41 @@
       "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 4
-  },
-  {
-    "company": "Cloudera, Inc.",
-    "domain": "cloudera.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 3
-  },
-  {
-    "company": "Databricks",
-    "domain": "databricks.com",
-    "industry": "Software",
-    "size": "XXLarge (10,000+ Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 3
-  },
-  {
-    "company": "Iterable",
-    "domain": "iterable.com",
-    "industry": "Software",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 3
-  },
-  {
-    "company": "Splunk Inc.",
-    "domain": "splunk.com",
-    "industry": "Software",
-    "size": "XXLarge (10,000+ Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 3
-  },
-  {
-    "company": "8x8, Inc.",
-    "domain": "8x8.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 3
+    "touchCount": 4,
+    "contacts": [
+      {
+        "name": "Veronica Servantez",
+        "email": "veronica.servantez@genesys.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Veronica Servantez",
+        "email": "veronica.servantez@genesys.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Tibor Vass",
+        "email": "tibor.vass@genesys.com",
+        "campaign": "Scott Interview Push",
+        "sent": false,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Tibor Vass",
+        "email": "tibor.vass@genesys.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "RingCentral, Inc.",
@@ -108,7 +150,41 @@
       "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 3
+    "touchCount": 3,
+    "contacts": [
+      {
+        "name": "Bernice Wen",
+        "email": "bernice.wen@ringcentral.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "David Cowings",
+        "email": "david.cowings@ringcentral.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      },
+      {
+        "name": "Khurram T.",
+        "email": "khurram.taji@ringcentral.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "David Cowings",
+        "email": "david.cowings@ringcentral.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Qlik",
@@ -120,19 +196,33 @@
       "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 3
-  },
-  {
-    "company": "Workiva Inc.",
-    "domain": "workiva.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 3
+    "touchCount": 3,
+    "contacts": [
+      {
+        "name": "Christopher Powell",
+        "email": "chris.powell@qlik.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Christopher Powell",
+        "email": "chris.powell@qlik.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Christopher Powell",
+        "email": "chris.powell@qlik.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Pegasystems Inc.",
@@ -144,7 +234,147 @@
       "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 3
+    "touchCount": 3,
+    "contacts": [
+      {
+        "name": "Dom Gregson",
+        "email": "dominic.gregson@pega.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Tara Dazao",
+        "email": "tara.dezao@pega.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Tara Dazao",
+        "email": "tara.dezao@pega.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Iterable",
+    "domain": "iterable.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3,
+    "contacts": [
+      {
+        "name": "Priya Gill",
+        "email": "priya.gill@iterable.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Doug Adamic",
+        "email": "doug.adamic@iterable.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Doug Adamic",
+        "email": "doug.adamic@iterable.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Databricks",
+    "domain": "databricks.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3,
+    "contacts": [
+      {
+        "name": "Andrea Brannan",
+        "email": "andrea.brannan@databricks.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Andrea Brannan",
+        "email": "andrea.brannan@databricks.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      },
+      {
+        "name": "junta.nakai@databricks.com",
+        "email": "junta.nakai@databricks.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Cloudera, Inc.",
+    "domain": "cloudera.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3,
+    "contacts": [
+      {
+        "name": "Valerie Glover",
+        "email": "val@cloudera.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Valerie Glover",
+        "email": "val@cloudera.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Jeff Healey",
+        "email": "jhealey@cloudera.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "BlackLine, Inc.",
@@ -156,7 +386,147 @@
       "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 3
+    "touchCount": 3,
+    "contacts": [
+      {
+        "name": "Emily Campbell",
+        "email": "emily.campbell@blackline.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Emily Campbell",
+        "email": "emily.campbell@blackline.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      },
+      {
+        "name": "Emily Campbell",
+        "email": "emily.campbell@blackline.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "8x8, Inc.",
+    "domain": "8x8.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3,
+    "contacts": [
+      {
+        "name": "Caleb Rountree",
+        "email": "caleb.rountree@8x8.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Bruno Bertini",
+        "email": "bruno.bertini@8x8.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Bruno Bertini",
+        "email": "bruno.bertini@8x8.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Workiva Inc.",
+    "domain": "workiva.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3,
+    "contacts": [
+      {
+        "name": "Gareth Evans",
+        "email": "gareth.evans@workiva.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "kim.huffman@workiva.com",
+        "email": "kim.huffman@workiva.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "kim.huffman@workiva.com",
+        "email": "kim.huffman@workiva.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Splunk Inc.",
+    "domain": "splunk.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 3,
+    "contacts": [
+      {
+        "name": "Renaud Bizet",
+        "email": "rbizet@splunk.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Claire Hockin",
+        "email": "claire.hockin@splunk.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Claire Hockin",
+        "email": "claire.hockin@splunk.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "SHI International Corp.",
@@ -167,227 +537,25 @@
       "Lemlist: AccountCast (Danny)",
       "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
-  },
-  {
-    "company": "Tableau",
-    "domain": "tableau.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Citrix Systems, Inc.",
-    "domain": "citrix.com",
-    "industry": "Software",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Dropbox, Inc.",
-    "domain": "dropbox.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Perficient, Inc.",
-    "domain": "perficient.com",
-    "industry": "Software",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Zendesk, Inc.",
-    "domain": "zendesk.com",
-    "industry": "Business Services",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Zillow Group, Inc.",
-    "domain": "zillowgroup.com",
-    "industry": "Software",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Dynatrace, Inc.",
-    "domain": "dynatrace.com",
-    "industry": "Software",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Cvent",
-    "domain": "cvent.com",
-    "industry": "Software",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Appviewx",
-    "domain": "appviewx.com",
-    "industry": "Manufacturing",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Snowflake Inc.",
-    "domain": "snowflake.com",
-    "industry": "Software",
-    "size": "XXLarge (10,000+ Employees)",
-    "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "F5 Networks, Inc.",
-    "domain": "f5.com",
-    "industry": "Telecommunications",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Athenahealth",
-    "domain": "athenahealth.com",
-    "industry": "Software",
-    "size": "XXLarge (10,000+ Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Getty Images Holdings, Inc.",
-    "domain": "gettyimages.com",
-    "industry": "Business Services",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "11:11 Systems, Inc.",
-    "domain": "1111systems.com",
-    "industry": "Business Services",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Hitachi Vantara",
-    "domain": "hitachivantara.com",
-    "industry": "Manufacturing",
-    "size": "XXLarge (10,000+ Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "ACI Worldwide, Inc.",
-    "domain": "aciworldwide.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Fico",
-    "domain": "fico.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Waters Corporation",
-    "domain": "waters.com",
-    "industry": "Manufacturing",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Guardian Industries",
-    "domain": "guardian.com",
-    "industry": "Manufacturing",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Avid Technology, Inc.",
-    "domain": "avid.com",
-    "industry": "Manufacturing",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Elisabeth Hauser",
+        "email": "elisabeth_hauser@shi.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Elisabeth Hauser",
+        "email": "elisabeth_hauser@shi.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Radancy",
@@ -398,29 +566,199 @@
       "Lemlist: AccountCast (Danny)",
       "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Duncan McInnes",
+        "email": "duncan.mcinnes@radancy.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Duncan McInnes",
+        "email": "duncan.mcinnes@radancy.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Square Inc",
-    "domain": "squareup.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Esri",
-    "domain": "esri.com",
+    "company": "Perficient, Inc.",
+    "domain": "perficient.com",
     "industry": "Software",
     "size": "XLarge (5,000 - 10,000 Employees)",
     "channels": [
       "Lemlist: AccountCast (Danny)",
       "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Sumantra Nandi",
+        "email": "sumantra.nandi@perficient.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Sumantra Nandi",
+        "email": "sumantra.nandi@perficient.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Hitachi Vantara",
+    "domain": "hitachivantara.com",
+    "industry": "Manufacturing",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Karina Andrade",
+        "email": "karina.andrade@hitachivantara.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Karina Andrade",
+        "email": "karina.andrade@hitachivantara.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Guardian Industries",
+    "domain": "guardian.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Ernesto Arriaga Ollero",
+        "email": "earriaga@guardian.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Ernesto Arriaga Ollero",
+        "email": "earriaga@guardian.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Getty Images Holdings, Inc.",
+    "domain": "gettyimages.com",
+    "industry": "Business Services",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Lucas Haber",
+        "email": "lucas.haber@gettyimages.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Lucas Haber",
+        "email": "lucas.haber@gettyimages.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Fico",
+    "domain": "fico.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Martin Lloyd",
+        "email": "martinlloyd@fico.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Martin Lloyd",
+        "email": "martinlloyd@fico.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "F5 Networks, Inc.",
+    "domain": "f5.com",
+    "industry": "Telecommunications",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "James Birnie",
+        "email": "j.birnie@f5.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "James Birnie",
+        "email": "j.birnie@f5.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Extreme Networks, Inc.",
@@ -431,29 +769,54 @@
       "Lemlist: AccountCast (Danny)",
       "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Alwayne Powell",
+        "email": "apowell@extremenetworks.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Alwayne Powell",
+        "email": "apowell@extremenetworks.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Cars.com",
-    "domain": "cars.com",
-    "industry": "Business Services",
-    "size": "Large (1,000 - 4,999 Employees)",
+    "company": "Esri",
+    "domain": "esri.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
     "channels": [
       "Lemlist: AccountCast (Danny)",
       "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
-  },
-  {
-    "company": "Edmunds",
-    "domain": "edmunds.com",
-    "industry": "Manufacturing",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)",
-      "Lemlist: Tier 1 (Kyla)"
-    ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Marianna Kantor",
+        "email": "mkantor@esri.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Marianna Kantor",
+        "email": "mkantor@esri.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Epicor Software Corporation",
@@ -464,194 +827,228 @@
       "Lemlist: AccountCast (Danny)",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Michelle Graham",
+        "email": "michelle.graham@epicor.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Kerrie Jordan",
+        "email": "kerrie.jordan@epicor.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Commvault Systems, Inc.",
-    "domain": "commvault.com",
-    "industry": "Transportation & Travel",
-    "size": "Large (1,000 - 4,999 Employees)",
+    "company": "Edmunds",
+    "domain": "edmunds.com",
+    "industry": "Manufacturing",
+    "size": "Medium-Large (500 - 999 Employees)",
     "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Dyan Melissa Go",
+        "email": "dgo@edmunds.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Dyan Melissa Go",
+        "email": "dgo@edmunds.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Toast, Inc",
-    "domain": "toasttab.com",
+    "company": "Dynatrace, Inc.",
+    "domain": "dynatrace.com",
     "industry": "Software",
     "size": "XLarge (5,000 - 10,000 Employees)",
     "channels": [
       "Lemlist: AccountCast (Danny)",
-      "Lemlist: AccountCast Launch"
+      "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Joshua Smith",
+        "email": "joshua.smith@dynatrace.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Joshua Smith",
+        "email": "joshua.smith@dynatrace.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Xactly Corp",
-    "domain": "xactlycorp.com",
-    "industry": "Software",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Klaviyo, Inc.",
-    "domain": "klaviyo.com",
-    "industry": "Wholesalers",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Hyland Software, Inc.",
-    "domain": "hyland.com",
+    "company": "Dropbox, Inc.",
+    "domain": "dropbox.com",
     "industry": "Software",
     "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Pratul Lakhotia",
+        "email": "pratul@dropbox.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Pratul Lakhotia",
+        "email": "pratul@dropbox.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Vertex, Inc.",
-    "domain": "vertexinc.com",
+    "company": "Cvent",
+    "domain": "cvent.com",
     "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "KnowBe4",
-    "domain": "knowbe4.com",
-    "industry": "Software",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Zuora, Inc.",
-    "domain": "zuora.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Smartsheet Inc.",
-    "domain": "smartsheet.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "UiPath Inc.",
-    "domain": "uipath.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Box, Inc.",
-    "domain": "box.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Zscaler, Inc.",
-    "domain": "zscaler.com",
-    "industry": "Manufacturing",
     "size": "XLarge (5,000 - 10,000 Employees)",
     "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Laurence Ewen",
+        "email": "lewen@cvent.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Laurence Ewen",
+        "email": "lewen@cvent.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Sciencelogic",
-    "domain": "sciencelogic.com",
+    "company": "Citrix Systems, Inc.",
+    "domain": "citrix.com",
     "industry": "Software",
-    "size": "Medium-Large (500 - 999 Employees)",
+    "size": "XLarge (5,000 - 10,000 Employees)",
     "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Wade Poezyn",
+        "email": "wade.poezyn@citrix.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Wade Poezyn",
+        "email": "wade.poezyn@citrix.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Sovos Compliance, LLC",
-    "domain": "sovos.com",
-    "industry": "Software",
+    "company": "Cars.com",
+    "domain": "cars.com",
+    "industry": "Business Services",
     "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Jennifer Vianello",
+        "email": "jvianello@cars.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Jennifer Vianello",
+        "email": "jvianello@cars.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Optimizely",
-    "domain": "optimizely.com",
-    "industry": "Software",
+    "company": "Avid Technology, Inc.",
+    "domain": "avid.com",
+    "industry": "Manufacturing",
     "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
-  },
-  {
-    "company": "Braze, Inc.",
-    "domain": "braze.com",
-    "industry": "Finance",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 2
-  },
-  {
-    "company": "Collibra",
-    "domain": "collibra.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: Scott Interview Push",
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Angela Stelle",
+        "email": "angela.stelle@avid.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Angela Stelle",
+        "email": "angela.stelle@avid.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Jitterbit",
@@ -662,18 +1059,460 @@
       "Lemlist: AccountCast (Danny)",
       "Lemlist: Tier 1 (Kyla)"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Natália Cardoso",
+        "email": "natalia.cardoso@jitterbit.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Natália Cardoso",
+        "email": "natalia.cardoso@jitterbit.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Airtable",
-    "domain": "airtable.com",
-    "industry": "Telecommunications",
+    "company": "Athenahealth",
+    "domain": "athenahealth.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Liz Franks",
+        "email": "efranks@athenahealth.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Liz Franks",
+        "email": "efranks@athenahealth.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Appviewx",
+    "domain": "appviewx.com",
+    "industry": "Manufacturing",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Alex Babar",
+        "email": "alex.babar@appviewx.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Alex Babar",
+        "email": "alex.babar@appviewx.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "ACI Worldwide, Inc.",
+    "domain": "aciworldwide.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Milind G. Kharkar",
+        "email": "milind.kharkar@aciworldwide.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Milind G. Kharkar",
+        "email": "milind.kharkar@aciworldwide.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "11:11 Systems, Inc.",
+    "domain": "1111systems.com",
+    "industry": "Business Services",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Jennifer Brenner",
+        "email": "jbrenner@1111systems.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Jennifer Brenner",
+        "email": "jbrenner@1111systems.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Zillow Group, Inc.",
+    "domain": "zillowgroup.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Lauren LeBrun",
+        "email": "laurenle@zillowgroup.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Lauren LeBrun",
+        "email": "laurenle@zillowgroup.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Zendesk, Inc.",
+    "domain": "zendesk.com",
+    "industry": "Business Services",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Stephanie Camp",
+        "email": "stephanie.camp@zendesk.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Stephanie Camp",
+        "email": "stephanie.camp@zendesk.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Waters Corporation",
+    "domain": "waters.com",
+    "industry": "Manufacturing",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Elizabeth F.",
+        "email": "elizabeth_foley@waters.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Elizabeth F.",
+        "email": "elizabeth_foley@waters.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Toast, Inc",
+    "domain": "toasttab.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Meghan (Giles) Singer",
+        "email": "meghan.singer@toasttab.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Kelly Sennatt Esten",
+        "email": "kesten@toasttab.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Tableau",
+    "domain": "tableau.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Larissa Amoroso",
+        "email": "larissa.amoroso@tableau.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Larissa Amoroso",
+        "email": "larissa.amoroso@tableau.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Square Inc",
+    "domain": "squareup.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)",
+      "Lemlist: Tier 1 (Kyla)"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Lindsey Irvine",
+        "email": "lirvine@squareup.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Lindsey Irvine",
+        "email": "lirvine@squareup.com",
+        "campaign": "Tier 1 (Kyla)",
+        "sent": false,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Commvault Systems, Inc.",
+    "domain": "commvault.com",
+    "industry": "Transportation & Travel",
     "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
       "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Anna Griffin",
+        "email": "agriffin@commvault.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": true,
+        "replied": true
+      },
+      {
+        "name": "Anna Griffin",
+        "email": "agriffin@commvault.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Box, Inc.",
+    "domain": "box.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "tgellman@box.com",
+        "email": "tgellman@box.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "tgellman@box.com",
+        "email": "tgellman@box.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Sciencelogic",
+    "domain": "sciencelogic.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Tina McNulty",
+        "email": "tina.mcnulty@sciencelogic.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Tina McNulty",
+        "email": "tina.mcnulty@sciencelogic.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Zscaler, Inc.",
+    "domain": "zscaler.com",
+    "industry": "Manufacturing",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Sunil Frida",
+        "email": "sfrida@zscaler.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Sunil Frida",
+        "email": "sfrida@zscaler.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Xactly Corp",
+    "domain": "xactlycorp.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Tiffany Sieve",
+        "email": "tsieve@xactlycorp.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Tiffany Sieve",
+        "email": "tsieve@xactlycorp.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Bubble",
@@ -684,18 +1523,228 @@
       "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Tatiana Afanasyeva",
+        "email": "tatiana.afanasyeva@bubble.io",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Tatiana Afanasyeva",
+        "email": "tatiana.afanasyeva@bubble.io",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Digitate",
-    "domain": "digitate.com",
-    "industry": "Software",
-    "size": "Medium (200 - 499 Employees)",
+    "company": "Braze, Inc.",
+    "domain": "braze.com",
+    "industry": "Finance",
+    "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
       "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Spencer Burke",
+        "email": "spencer@braze.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Spencer Burke",
+        "email": "spencer@braze.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Optimizely",
+    "domain": "optimizely.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Shafqat",
+        "email": "shafqat.islam@optimizely.com",
+        "campaign": "Scott Interview Push",
+        "sent": false,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Shafqat",
+        "email": "shafqat.islam@optimizely.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Zuora, Inc.",
+    "domain": "zuora.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "kyle@zuora.com",
+        "email": "kyle@zuora.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "kyle@zuora.com",
+        "email": "kyle@zuora.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Klaviyo, Inc.",
+    "domain": "klaviyo.com",
+    "industry": "Wholesalers",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Jamie Domenici",
+        "email": "jamie.domenici@klaviyo.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Jamie Domenici",
+        "email": "jamie.domenici@klaviyo.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Collibra",
+    "domain": "collibra.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Denise Broady",
+        "email": "denise.broady@collibra.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Denise Broady",
+        "email": "denise.broady@collibra.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Sovos Compliance, LLC",
+    "domain": "sovos.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Christopher Lynch",
+        "email": "christopher.lynch@sovos.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Christopher Lynch",
+        "email": "christopher.lynch@sovos.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Snowflake Inc.",
+    "domain": "snowflake.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Denise Persson",
+        "email": "denise.persson@snowflake.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Denise Persson",
+        "email": "denise.persson@snowflake.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Clickup",
@@ -706,197 +1755,252 @@
       "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 2
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "gaurav@clickup.com",
+        "email": "gaurav@clickup.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Matt Bauman",
+        "email": "matt@clickup.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "gaurav@clickup.com",
+        "email": "gaurav@clickup.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Equitable Holdings, Inc.",
-    "domain": "equitable.com",
-    "industry": "Finance",
-    "size": "XLarge (5,000 - 10,000 Employees)",
+    "company": "Hyland Software, Inc.",
+    "domain": "hyland.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
+      "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 1
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Drew",
+        "email": "drew.chapin@hyland.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Drew",
+        "email": "drew.chapin@hyland.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Becca Toth",
+        "email": "becca.toth@hyland.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Presidio Inc",
-    "domain": "presidio.com",
+    "company": "Digitate",
+    "domain": "digitate.com",
+    "industry": "Software",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Avi Bhagtani",
+        "email": "avi.bhagtani@digitate.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Avi Bhagtani",
+        "email": "avi.bhagtani@digitate.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Vertex, Inc.",
+    "domain": "vertexinc.com",
     "industry": "Software",
     "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
-      "Lemlist: AccountCast (Danny)"
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 1
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Chris Jones",
+        "email": "chris.jones@vertexinc.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      },
+      {
+        "name": "Chris Jones",
+        "email": "chris.jones@vertexinc.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Airbnb, Inc.",
-    "domain": "airbnb.com",
-    "industry": "Software",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Bazaarvoice, Inc.",
-    "domain": "bazaarvoice.com",
+    "company": "UiPath Inc.",
+    "domain": "uipath.com",
     "industry": "Software",
     "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
-      "Lemlist: AccountCast (Danny)"
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 1
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Bobby",
+        "email": "bobby.patrick@uipath.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      },
+      {
+        "name": "Bobby",
+        "email": "bobby.patrick@uipath.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Rimini Street, Inc.",
-    "domain": "riministreet.com",
+    "company": "Airtable",
+    "domain": "airtable.com",
+    "industry": "Telecommunications",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Calen Holbrooks",
+        "email": "calen@airtable.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Paul Ohls",
+        "email": "paul.ohls@airtable.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Calen Holbrooks",
+        "email": "calen@airtable.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Smartsheet Inc.",
+    "domain": "smartsheet.com",
     "industry": "Software",
     "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
-      "Lemlist: AccountCast (Danny)"
+      "Lemlist: Scott Interview Push",
+      "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 1
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Chris Pick",
+        "email": "chris.pick@smartsheet.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Chris Pick",
+        "email": "chris.pick@smartsheet.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Naviga",
-    "domain": "navigaglobal.com",
+    "company": "KnowBe4",
+    "domain": "knowbe4.com",
     "industry": "Software",
     "size": "Medium-Large (500 - 999 Employees)",
     "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Veeva Systems Inc.",
-    "domain": "veeva.com",
-    "industry": "Software",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Epsilon",
-    "domain": "epsilon.com",
-    "industry": "Software",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Verint",
-    "domain": "verint.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Applied Systems",
-    "domain": "appliedsystems.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Qualtrics, LLC",
-    "domain": "qualtrics.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Medallia, Inc.",
-    "domain": "medallia.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "R&R Partners",
-    "domain": "rrpartners.com",
-    "industry": "Business Services",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Blue Yonder",
-    "domain": "blueyonder.com",
-    "industry": "Finance",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
+      "Lemlist: Scott Interview Push",
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 1
-  },
-  {
-    "company": "Vertafore",
-    "domain": "vertafore.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Proofpoint, Inc.",
-    "domain": "proofpoint.com",
-    "industry": "Manufacturing",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Avi-Spl",
-    "domain": "avispl.com",
-    "industry": "Manufacturing",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Csg",
-    "domain": "csgi.com",
-    "industry": "Software",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Tyler Technologies, Inc.",
-    "domain": "tylertech.com",
-    "industry": "Software",
-    "size": "XXLarge (10,000+ Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
+    "touchCount": 2,
+    "contacts": [
+      {
+        "name": "Cindy Zhou",
+        "email": "czhou@knowbe4.com",
+        "campaign": "Scott Interview Push",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Cindy Zhou",
+        "email": "czhou@knowbe4.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Skillsoft Corp.",
@@ -906,167 +2010,17 @@
     "channels": [
       "Lemlist: AccountCast (Danny)"
     ],
-    "touchCount": 1
-  },
-  {
-    "company": "Pyramid Consulting, Inc.",
-    "domain": "pyramidci.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Guidewire Software, Inc.",
-    "domain": "guidewire.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "ZoomInfo",
-    "domain": "zoominfo.com",
-    "industry": "Business Services",
-    "size": "Medium (200 - 499 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "ManTech International Corporation",
-    "domain": "mantech.com",
-    "industry": "Manufacturing",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Sonicwall",
-    "domain": "sonicwall.com",
-    "industry": "Manufacturing",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Dodge Data & Analytics",
-    "domain": "construction.com",
-    "industry": "Telecommunications",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Butterball, LLC",
-    "domain": "butterball.com",
-    "industry": "Manufacturing",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Liveramp",
-    "domain": "liveramp.com",
-    "industry": "Business Services",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Dataminr",
-    "domain": "dataminr.com",
-    "industry": "Software",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Eversana",
-    "domain": "eversana.com",
-    "industry": "Manufacturing",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Qualys",
-    "domain": "qualys.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "DataBank Holdings, Ltd.",
-    "domain": "databank.com",
-    "industry": "Business Services",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Glassdoor, Inc",
-    "domain": "glassdoor.com",
-    "industry": "Telecommunications",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Cradlepoint",
-    "domain": "cradlepoint.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Manhattan Associates, Inc.",
-    "domain": "manh.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Tierpoint",
-    "domain": "tierpoint.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Devon Zaza",
+        "email": "devon.zaza@skillsoft.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Sharecare, Inc.",
@@ -1076,17 +2030,197 @@
     "channels": [
       "Lemlist: AccountCast (Danny)"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Derek Fulford",
+        "email": "derek.fulford@sharecare.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "SolarWinds Corporation",
-    "domain": "solarwinds.com",
+    "company": "Rimini Street, Inc.",
+    "domain": "riministreet.com",
     "industry": "Software",
     "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
       "Lemlist: AccountCast (Danny)"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "David Rowe",
+        "email": "drowe@riministreet.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "R&R Partners",
+    "domain": "rrpartners.com",
+    "industry": "Business Services",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Kari Jaspersohn",
+        "email": "kari.jaspersohn@rrpartners.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Qualys",
+    "domain": "qualys.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "May Mitchell",
+        "email": "mmitchell@qualys.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Qualtrics, LLC",
+    "domain": "qualtrics.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Lynn Girotto",
+        "email": "lynng@qualtrics.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Pyramid Consulting, Inc.",
+    "domain": "pyramidci.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Litika Mehta",
+        "email": "litika.mehta@pyramidci.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Proofpoint, Inc.",
+    "domain": "proofpoint.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Joel Borgmeier",
+        "email": "jborgmeier@proofpoint.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Presidio Inc",
+    "domain": "presidio.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Tina McNulty",
+        "email": "tmcnulty@presidio.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Naviga",
+    "domain": "navigaglobal.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Juliana Eslava",
+        "email": "juliana.eslava@navigaglobal.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Medallia, Inc.",
+    "domain": "medallia.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Carrie Parker",
+        "email": "cparker@medallia.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Mavenir",
@@ -1096,27 +2230,57 @@
     "channels": [
       "Lemlist: AccountCast (Danny)"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Emmanuela Spiteri",
+        "email": "emmanuela.spiteri@mavenir.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Zynga Inc.",
-    "domain": "zynga.com",
+    "company": "ManTech International Corporation",
+    "domain": "mantech.com",
+    "industry": "Manufacturing",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Laura Sargent",
+        "email": "laura.sargent@mantech.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Manhattan Associates, Inc.",
+    "domain": "manh.com",
     "industry": "Software",
     "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
       "Lemlist: AccountCast (Danny)"
     ],
-    "touchCount": 1
-  },
-  {
-    "company": "Data Axle, Inc",
-    "domain": "data-axle.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast (Danny)"
-    ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Daniel J.",
+        "email": "djennings@manh.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Mailchimp",
@@ -1126,7 +2290,17 @@
     "channels": [
       "Lemlist: AccountCast (Danny)"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Mark Oliver",
+        "email": "mark.oliver@mailchimp.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Magnite, Inc.",
@@ -1136,7 +2310,457 @@
     "channels": [
       "Lemlist: AccountCast (Danny)"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "David Hertog",
+        "email": "dhertog@magnite.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Liveramp",
+    "domain": "liveramp.com",
+    "industry": "Business Services",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Jessica Shapiro",
+        "email": "jshapiro@liveramp.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Guidewire Software, Inc.",
+    "domain": "guidewire.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Brian Desmond",
+        "email": "bdesmond@guidewire.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Glassdoor, Inc",
+    "domain": "glassdoor.com",
+    "industry": "Telecommunications",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Eric Petitt",
+        "email": "eric.petitt@glassdoor.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Eversana",
+    "domain": "eversana.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Sophie Ferronato",
+        "email": "sophie.ferronato@eversana.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Epsilon",
+    "domain": "epsilon.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Shannon Keller",
+        "email": "shannon.murphy@epsilon.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Dodge Data & Analytics",
+    "domain": "construction.com",
+    "industry": "Telecommunications",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Jeff Nulsen",
+        "email": "jeff.nulsen@construction.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Dataminr",
+    "domain": "dataminr.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Sarinnagh Budris",
+        "email": "sarinnagh.budris@dataminr.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "DataBank Holdings, Ltd.",
+    "domain": "databank.com",
+    "industry": "Business Services",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "JP Laqueur",
+        "email": "jlaqueur@databank.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Data Axle, Inc",
+    "domain": "data-axle.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "George C.",
+        "email": "george.pfaff@data-axle.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Csg",
+    "domain": "csgi.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Madison Southerlin",
+        "email": "madison.southerlin@csgi.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Cradlepoint",
+    "domain": "cradlepoint.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Katie Johnson",
+        "email": "katie.johnson@cradlepoint.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Butterball, LLC",
+    "domain": "butterball.com",
+    "industry": "Manufacturing",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Kyle Lock",
+        "email": "klock@butterball.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Bazaarvoice, Inc.",
+    "domain": "bazaarvoice.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Douglas C. Straton",
+        "email": "douglas.straton@bazaarvoice.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Avi-Spl",
+    "domain": "avispl.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Eric Barie",
+        "email": "eric.barie@avispl.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Applied Systems",
+    "domain": "appliedsystems.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Katie Seitz",
+        "email": "kaseitz@appliedsystems.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Zynga Inc.",
+    "domain": "zynga.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Shay Ze'ev Yosifon",
+        "email": "shay.yosifon@zynga.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "ZoomInfo",
+    "domain": "zoominfo.com",
+    "industry": "Business Services",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Tal Raz",
+        "email": "tal.raz@zoominfo.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Vertafore",
+    "domain": "vertafore.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Andrea Stutesman Olson",
+        "email": "aolson@vertafore.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Verint",
+    "domain": "verint.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Mrityunjay Yadav",
+        "email": "yadav.mrityunjay@verint.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Veeva Systems Inc.",
+    "domain": "veeva.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "David Rogers",
+        "email": "david.rogers@veeva.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Tyler Technologies, Inc.",
+    "domain": "tylertech.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Brian Heath",
+        "email": "brian.heath@tylertech.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Tierpoint",
+    "domain": "tierpoint.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast (Danny)"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Christian Merenu",
+        "email": "christian.merenu@tierpoint.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Technologyadvice",
@@ -1146,127 +2770,77 @@
     "channels": [
       "Lemlist: AccountCast (Danny)"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Jesse Walsh",
+        "email": "jesse.walsh@technologyadvice.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Nutanix, Inc.",
-    "domain": "nutanix.com",
-    "industry": "Software",
-    "size": "XXLarge (10,000+ Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Okta, Inc.",
-    "domain": "okta.com",
-    "industry": "Software",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Rubrik, Inc.",
-    "domain": "rubrik.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Grammarly",
-    "domain": "grammarly.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "New Relic, Inc.",
-    "domain": "newrelic.com",
-    "industry": "Software",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Instructure",
-    "domain": "instructure.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Pipedrive: In Pipeline"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Rippling People Center Inc.",
-    "domain": "rippling.com",
-    "industry": "Business Services",
-    "size": "XLarge (5,000 - 10,000 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "InterSystems Corporation",
-    "domain": "intersystems.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Carta",
-    "domain": "carta.com",
-    "industry": "Finance",
-    "size": "Medium (200 - 499 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "CrowdStrike Holdings, Inc.",
-    "domain": "crowdstrike.com",
+    "company": "Sonicwall",
+    "domain": "sonicwall.com",
     "industry": "Manufacturing",
-    "size": "XXLarge (10,000+ Employees)",
+    "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
-      "Lemlist: AccountCast Launch"
+      "Lemlist: AccountCast (Danny)"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Jamie Stroupe",
+        "email": "jstroupe@sonicwall.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Alteryx, Inc.",
-    "domain": "alteryx.com",
+    "company": "SolarWinds Corporation",
+    "domain": "solarwinds.com",
     "industry": "Software",
     "size": "Large (1,000 - 4,999 Employees)",
     "channels": [
-      "Lemlist: AccountCast Launch"
+      "Lemlist: AccountCast (Danny)"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Brandon Hendricks",
+        "email": "brandon.hendricks@solarwinds.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
-    "company": "Datadog, Inc.",
-    "domain": "datadoghq.com",
+    "company": "Airbnb, Inc.",
+    "domain": "airbnb.com",
     "industry": "Software",
     "size": "XLarge (5,000 - 10,000 Employees)",
     "channels": [
-      "Lemlist: AccountCast Launch"
+      "Lemlist: AccountCast (Danny)"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Ran Tao",
+        "email": "ran.tao@airbnb.com",
+        "campaign": "AccountCast (Danny)",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Nasuni",
@@ -1276,177 +2850,17 @@
     "channels": [
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 1
-  },
-  {
-    "company": "PagerDuty, Inc.",
-    "domain": "pagerduty.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "SalesLoft",
-    "domain": "salesloft.com",
-    "industry": "Software",
-    "size": "Medium (200 - 499 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Domo, Inc.",
-    "domain": "domo.com",
-    "industry": "Software",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Webflow",
-    "domain": "webflow.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Medusind",
-    "domain": "medusind.com",
-    "industry": "Healthcare",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Rapid7, Inc.",
-    "domain": "rapid7.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Varonis",
-    "domain": "varonis.com",
-    "industry": "Transportation & Travel",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Sugarcrm",
-    "domain": "sugarcrm.com",
-    "industry": "Software",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Orca Security",
-    "domain": "orca.security",
-    "industry": "Manufacturing",
-    "size": "Medium (200 - 499 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Tenable",
-    "domain": "tenable.com",
-    "industry": "Manufacturing",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "UserTesting",
-    "domain": "usertesting.com",
-    "industry": "Software",
-    "size": "Medium (200 - 499 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Flexera",
-    "domain": "flexera.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Amplitude, Inc.",
-    "domain": "amplitude.com",
-    "industry": "Software",
-    "size": "Medium-Large (500 - 999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Gigamon",
-    "domain": "gigamon.com",
-    "industry": "Manufacturing",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Anthropic",
-    "domain": "anthropic.com",
-    "industry": "Manufacturing",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "SentinelOne, Inc.",
-    "domain": "sentinelone.com",
-    "industry": "Manufacturing",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
-  },
-  {
-    "company": "Icertis",
-    "domain": "icertis.com",
-    "industry": "Software",
-    "size": "Large (1,000 - 4,999 Employees)",
-    "channels": [
-      "Lemlist: AccountCast Launch"
-    ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Hannah Brudreski Budreski",
+        "email": "hbudreski@nasuni.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": true
+      }
+    ]
   },
   {
     "company": "Salsify",
@@ -1456,7 +2870,613 @@
     "channels": [
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Peter",
+        "email": "peter.crosby@salsify.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Gigamon",
+    "domain": "gigamon.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Lisa Harrupmieuli",
+        "email": "lisa.harrupmieuli@gigamon.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Flexera",
+    "domain": "flexera.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Leslie Alore",
+        "email": "lalore@flexera.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "InterSystems Corporation",
+    "domain": "intersystems.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Ross Whitaker",
+        "email": "ross.whittaker@intersystems.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Gary Maggiolino",
+        "email": "gary.maggiolino@intersystems.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "SentinelOne, Inc.",
+    "domain": "sentinelone.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Kelly Flowers",
+        "email": "kelly.flowers@sentinelone.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Rippling People Center Inc.",
+    "domain": "rippling.com",
+    "industry": "Business Services",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Matt Epstein",
+        "email": "mepstein@rippling.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Nutanix, Inc.",
+    "domain": "nutanix.com",
+    "industry": "Software",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Mandy",
+        "email": "mandy.dhaliwal@nutanix.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "SalesLoft",
+    "domain": "salesloft.com",
+    "industry": "Software",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Mark Niemic",
+        "email": "mark.niemiec@salesloft.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Domo, Inc.",
+    "domain": "domo.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Mark Boothe",
+        "email": "mark.boothe@domo.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Grammarly",
+    "domain": "grammarly.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Lena Waters",
+        "email": "lena.waters@grammarly.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Anthropic",
+    "domain": "anthropic.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Sandy Banerjee",
+        "email": "sandy@anthropic.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Tenable",
+    "domain": "tenable.com",
+    "industry": "Manufacturing",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Meg O'leary",
+        "email": "moleary@tenable.com",
+        "campaign": "AccountCast Launch",
+        "sent": false,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Varonis",
+    "domain": "varonis.com",
+    "industry": "Transportation & Travel",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Rob Sobers",
+        "email": "rsobers@varonis.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Orca Security",
+    "domain": "orca.security",
+    "industry": "Manufacturing",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Meghan Mitchell-Marks",
+        "email": "meghan@orca.security",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "New Relic, Inc.",
+    "domain": "newrelic.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Katrina Wong",
+        "email": "kwong@newrelic.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Datadog, Inc.",
+    "domain": "datadoghq.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Sara Varni",
+        "email": "sara.varni@datadoghq.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Blue Yonder",
+    "domain": "blueyonder.com",
+    "industry": "Finance",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Patricia Harris",
+        "email": "patricia.harris@blueyonder.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Alteryx, Inc.",
+    "domain": "alteryx.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Michelle Huff",
+        "email": "michelle.huff@alteryx.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Rapid7, Inc.",
+    "domain": "rapid7.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Jessica Fernandez",
+        "email": "jessica_fernandez@rapid7.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      },
+      {
+        "name": "Corey Thomas",
+        "email": "corey_thomas@rapid7.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Carta",
+    "domain": "carta.com",
+    "industry": "Finance",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Jeff Perry",
+        "email": "jeff.perry@carta.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "PagerDuty, Inc.",
+    "domain": "pagerduty.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Katherine Calvert",
+        "email": "kcalvert@pagerduty.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "CrowdStrike Holdings, Inc.",
+    "domain": "crowdstrike.com",
+    "industry": "Manufacturing",
+    "size": "XXLarge (10,000+ Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Jennifer Johnson",
+        "email": "jennifer.johnson@crowdstrike.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Webflow",
+    "domain": "webflow.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Josh Grant",
+        "email": "josh.grant@webflow.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Amplitude, Inc.",
+    "domain": "amplitude.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Justin Sharaf",
+        "email": "justin.sharaf@amplitude.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Okta, Inc.",
+    "domain": "okta.com",
+    "industry": "Software",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Jon Addison",
+        "email": "jon.addison@okta.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Equitable Holdings, Inc.",
+    "domain": "equitable.com",
+    "industry": "Finance",
+    "size": "XLarge (5,000 - 10,000 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Greg Boosin",
+        "email": "greg.boosin@equitable.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "UserTesting",
+    "domain": "usertesting.com",
+    "industry": "Software",
+    "size": "Medium (200 - 499 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Johann Wrede",
+        "email": "jwrede@usertesting.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Rubrik, Inc.",
+    "domain": "rubrik.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "John Koo",
+        "email": "john.koo@rubrik.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Icertis",
+    "domain": "icertis.com",
+    "industry": "Software",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Jay Lee",
+        "email": "jay.lee@icertis.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Sugarcrm",
+    "domain": "sugarcrm.com",
+    "industry": "Software",
+    "size": "Medium-Large (500 - 999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Clare Dorrian",
+        "email": "cdorrian@sugarcrm.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Litera",
@@ -1466,7 +3486,25 @@
     "channels": [
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Cynthia Gumbert",
+        "email": "cynthia.gumbert@litera.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": true,
+        "replied": false
+      },
+      {
+        "name": "Don Lane",
+        "email": "don.lane@litera.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   },
   {
     "company": "Chargebee",
@@ -1476,6 +3514,36 @@
     "channels": [
       "Lemlist: AccountCast Launch"
     ],
-    "touchCount": 1
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Brian Clark",
+        "email": "brian.clark@chargebee.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
+  },
+  {
+    "company": "Medusind",
+    "domain": "medusind.com",
+    "industry": "Healthcare",
+    "size": "Large (1,000 - 4,999 Employees)",
+    "channels": [
+      "Lemlist: AccountCast Launch"
+    ],
+    "touchCount": 1,
+    "contacts": [
+      {
+        "name": "Adam FitzGerald",
+        "email": "adam.fitzgerald@medusind.com",
+        "campaign": "AccountCast Launch",
+        "sent": true,
+        "opened": false,
+        "replied": false
+      }
+    ]
   }
 ]
