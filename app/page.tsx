@@ -18,6 +18,17 @@ interface PipelineData {
   stages: PipelineStage[];
 }
 
+interface LemlistCampaign {
+  id: string;
+  name: string;
+  status: string;
+  sent: number;
+  opened: number;
+  clicked: number;
+  replied: number;
+  bounced: number;
+}
+
 type SortKey = "name" | "targeted" | "reached" | "replies" | "conversion" | "meetings" | "pmfScore" | "confidence";
 type SortDir = "asc" | "desc";
 type Tab = "dashboard" | "lab";
@@ -306,6 +317,7 @@ export default function Home() {
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [proposals, setProposals] = useState(PROPOSED_EXPERIMENTS);
   const [pipeline, setPipeline] = useState<PipelineData | null>(null);
+  const [lemlistData, setLemlistData] = useState<LemlistCampaign[] | null>(null);
   const [defsOpen, setDefsOpen] = useState(false);
 
   useEffect(() => {
@@ -313,7 +325,44 @@ export default function Home() {
       .then((r) => r.json())
       .then((data) => setPipeline(data))
       .catch(() => {});
+    fetch("/api/lemlist")
+      .then((r) => r.json())
+      .then((data) => setLemlistData(data.campaigns))
+      .catch(() => {});
   }, []);
+
+  // Merge live Lemlist data into campaigns
+  const campaignsWithLive = useMemo(() => {
+    if (!lemlistData) return CAMPAIGNS;
+    const lemlistMap: Record<string, LemlistCampaign> = {
+      "lemlist-danny": lemlistData.find((c) => c.id === "cam_BNmQsFaGTLY3yXkXF")!,
+      "lemlist-kyla": lemlistData.find((c) => c.id === "cam_mu9WWo7NqjpwXubWh")!,
+      "lemlist-scott-interview": lemlistData.find((c) => c.id === "cam_G222d33RL99aTLGto")!,
+      "lemlist-launch": lemlistData.find((c) => c.id === "cam_JL7ZR82ZcPauxQM5W")!,
+    };
+    return CAMPAIGNS.map((camp) => {
+      const live = lemlistMap[camp.id];
+      if (!live || live.sent === 0) return camp;
+      const openRate = live.sent > 0 ? `${Math.round((live.opened / live.sent) * 100)}%` : "0%";
+      const replyRate = live.sent > 0 ? `${((live.replied / live.sent) * 100).toFixed(1)}%` : "0%";
+      return {
+        ...camp,
+        targeted: live.sent,
+        reached: live.opened,
+        replies: live.replied,
+        conversion: replyRate,
+        confidence: "high" as const,
+        confidenceNote: "Live data from Lemlist API.",
+        details: [
+          { label: "Emails sent", value: live.sent },
+          { label: "Opened", value: live.opened, rate: openRate },
+          { label: "Replied", value: live.replied, rate: replyRate },
+          { label: "Clicked", value: live.clicked },
+          { label: "Bounced", value: live.bounced },
+        ],
+      };
+    });
+  }, [lemlistData]);
 
   const handleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -325,8 +374,8 @@ export default function Home() {
   };
 
   const sorted = useMemo(() => {
-    if (!sortKey) return CAMPAIGNS;
-    return [...CAMPAIGNS].sort((a, b) => {
+    if (!sortKey) return campaignsWithLive;
+    return [...campaignsWithLive].sort((a, b) => {
       let aVal: number;
       let bVal: number;
       if (sortKey === "name") {
@@ -350,10 +399,10 @@ export default function Home() {
       }
       return sortDir === "asc" ? aVal - bVal : bVal - aVal;
     });
-  }, [sortKey, sortDir]);
+  }, [sortKey, sortDir, campaignsWithLive]);
 
-  const totalMeetings = CAMPAIGNS.reduce((a, c) => a + c.meetings, 0);
-  const withPmf = CAMPAIGNS.filter((c) => c.pmfScore !== null && c.pmfScore > 0);
+  const totalMeetings = campaignsWithLive.reduce((a, c) => a + c.meetings, 0);
+  const withPmf = campaignsWithLive.filter((c) => c.pmfScore !== null && c.pmfScore > 0);
   const bestPmf = withPmf.length > 0 ? Math.max(...withPmf.map((c) => c.pmfScore!)) : null;
 
   const columns: { key: SortKey; label: string; align: string; hideOnMobile?: boolean }[] = [
@@ -462,15 +511,15 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
               <div className="border border-border rounded-lg px-4 py-3">
                 <div className="text-xs text-muted uppercase tracking-wide">Campaigns</div>
-                <div className="text-2xl font-bold font-mono mt-0.5">{CAMPAIGNS.length}</div>
+                <div className="text-2xl font-bold font-mono mt-0.5">{campaignsWithLive.length}</div>
                 <div className="text-xs text-muted">
-                  {CAMPAIGNS.filter((c) => c.status === "active").length} active \u00B7 {CAMPAIGNS.filter((c) => c.status === "planned").length} planned
+                  {campaignsWithLive.filter((c) => c.status === "active").length} active \u00B7 {campaignsWithLive.filter((c) => c.status === "planned").length} planned
                 </div>
               </div>
               <div className="border border-border rounded-lg px-4 py-3">
                 <div className="text-xs text-muted uppercase tracking-wide">Total targeted</div>
                 <div className="text-2xl font-bold font-mono mt-0.5">
-                  {CAMPAIGNS.reduce((a, c) => a + (typeof c.targeted === "number" ? c.targeted : 0), 0).toLocaleString()}
+                  {campaignsWithLive.reduce((a, c) => a + (typeof c.targeted === "number" ? c.targeted : 0), 0).toLocaleString()}
                 </div>
                 <div className="text-xs text-muted">across all channels</div>
               </div>
