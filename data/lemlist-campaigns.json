@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cam_BNmQsFaGTLY3yXkXF",
+    "name": "AccountCast (Danny)",
+    "status": "running",
+    "sent": 178,
+    "opened": 0,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 3
+  },
+  {
+    "id": "cam_mu9WWo7NqjpwXubWh",
+    "name": "Tier 1 AccountCast (Kyla)",
+    "status": "running",
+    "sent": 65,
+    "opened": 42,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 3
+  },
+  {
+    "id": "cam_G222d33RL99aTLGto",
+    "name": "Scott's Customer Interview Push",
+    "status": "running",
+    "sent": 87,
+    "opened": 35,
+    "clicked": 0,
+    "replied": 12,
+    "bounced": 0
+  },
+  {
+    "id": "cam_JL7ZR82ZcPauxQM5W",
+    "name": "AccountCast Launch",
+    "status": "ended",
+    "sent": 432,
+    "opened": 327,
+    "clicked": 0,
+    "replied": 33,
+    "bounced": 10
+  }
+]
