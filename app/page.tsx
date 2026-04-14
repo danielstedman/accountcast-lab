@@ -492,21 +492,47 @@ export default function Home() {
   const [lemlistData, setLemlistData] = useState<LemlistCampaign[] | null>(null);
   const [tamData, setTamData] = useState<TamData | null>(null);
   const [defsOpen, setDefsOpen] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
+  const [apiStatus, setApiStatus] = useState<Record<string, "loading" | "done" | "error">>({});
+  const [lastRefresh, setLastRefresh] = useState<string | null>(null);
+
+  const refreshAll = useCallback(() => {
+    setRefreshing(true);
+    setApiStatus({ pipedrive: "loading", lemlist: "loading", tam: "loading" });
+
+    const fetches = [
+      fetch("/api/pipeline")
+        .then((r) => r.json())
+        .then((data) => {
+          setPipeline(data);
+          setApiStatus((prev) => ({ ...prev, pipedrive: data.error ? "error" : "done" }));
+        })
+        .catch(() => setApiStatus((prev) => ({ ...prev, pipedrive: "error" }))),
+      fetch("/api/lemlist")
+        .then((r) => r.json())
+        .then((data) => {
+          setLemlistData(data.campaigns || []);
+          setApiStatus((prev) => ({ ...prev, lemlist: data.error ? "error" : "done" }));
+        })
+        .catch(() => setApiStatus((prev) => ({ ...prev, lemlist: "error" }))),
+      fetch("/api/tam")
+        .then((r) => r.json())
+        .then((data) => {
+          setTamData(data);
+          setApiStatus((prev) => ({ ...prev, tam: data.error ? "error" : "done" }));
+        })
+        .catch(() => setApiStatus((prev) => ({ ...prev, tam: "error" }))),
+    ];
+
+    Promise.all(fetches).then(() => {
+      setRefreshing(false);
+      setLastRefresh(new Date().toLocaleTimeString());
+    });
+  }, []);
 
   useEffect(() => {
-    fetch("/api/pipeline")
-      .then((r) => r.json())
-      .then((data) => setPipeline(data))
-      .catch(() => {});
-    fetch("/api/lemlist")
-      .then((r) => r.json())
-      .then((data) => setLemlistData(data.campaigns))
-      .catch(() => {});
-    fetch("/api/tam")
-      .then((r) => r.json())
-      .then((data) => setTamData(data))
-      .catch(() => {});
-  }, []);
+    refreshAll();
+  }, [refreshAll]);
 
   // Merge live Lemlist data into campaigns
   const campaignsWithLive = useMemo(() => {
@@ -607,8 +633,33 @@ export default function Home() {
               Growth experiments {"\u2014"} at a glance
             </p>
           </div>
-          <div className="text-xs text-muted">
-            Updated Apr 8, 2026
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1.5">
+              {Object.entries(apiStatus).map(([name, status]) => (
+                <span key={name} className="flex items-center gap-1" title={`${name}: ${status}`}>
+                  <span className={`w-1.5 h-1.5 rounded-full ${
+                    status === "done" ? "bg-emerald-500" :
+                    status === "loading" ? "bg-amber-400 animate-pulse" :
+                    status === "error" ? "bg-red-400" : "bg-zinc-300"
+                  }`} />
+                  <span className="text-[10px] text-muted hidden sm:inline">{name}</span>
+                </span>
+              ))}
+            </div>
+            <button
+              onClick={refreshAll}
+              disabled={refreshing}
+              className={`px-3 py-1.5 text-xs font-medium rounded-md border transition-colors ${
+                refreshing
+                  ? "border-zinc-200 text-zinc-400 cursor-wait"
+                  : "border-border text-muted hover:text-foreground hover:border-zinc-400"
+              }`}
+            >
+              {refreshing ? "Refreshing..." : "Refresh"}
+            </button>
+            {lastRefresh && (
+              <span className="text-[10px] text-zinc-400 hidden sm:inline">{lastRefresh}</span>
+            )}
           </div>
         </div>
         {/* Tabs */}
