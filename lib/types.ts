@@ -29,6 +29,7 @@ export interface Campaign {
   motion: Motion;   // "sales", "marketing", or "product"
   status: Status;
   dateRange: string;
+  startDate?: string; // ISO date for sorting; falls back to dateRange parsing if absent
   // Unified top-level metrics
   targeted: number | "n/a" | null; // people we aimed at, or n/a for inbound channels
   reached: number | null;     // people who engaged (opens, accepts, page views)

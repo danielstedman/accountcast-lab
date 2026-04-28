@@ -55,7 +55,7 @@ interface LemlistCampaign {
   stats: LemlistStats | null;
 }
 
-type SortKey = "name" | "targeted" | "reached" | "replies" | "conversion" | "meetings" | "pmfScore" | "confidence";
+type SortKey = "name" | "startDate" | "targeted" | "reached" | "replies" | "conversion" | "meetings" | "pmfScore" | "confidence";
 type SortDir = "asc" | "desc";
 type Tab = "dashboard" | "lab" | "tam";
 
@@ -82,6 +82,13 @@ function num(v: number | "n/a" | null) {
   if (v === "n/a") return <span className="text-zinc-400 text-xs">N/A</span>;
   if (v === null) return <span className="text-zinc-300">{"\u2014"}</span>;
   return v.toLocaleString();
+}
+
+function formatStartDate(iso: string | undefined): string {
+  if (!iso) return "\u2014";
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return "\u2014";
+  return d.toLocaleString("en-US", { month: "short", day: "numeric" });
 }
 
 function MotionBadge({ motion }: { motion: Motion }) {
@@ -177,6 +184,11 @@ function CampaignRow({ campaign }: { campaign: Campaign }) {
           </div>
           <div className="text-xs text-muted truncate max-w-[140px] lg:max-w-none">{c.channel}{c.mode ? ` \u00B7 ${c.mode}` : ""} \u00B7 {c.dateRange}</div>
         </td>
+        <td className="py-3 pr-4 text-sm font-mono text-right hidden lg:table-cell whitespace-nowrap">
+          {c.startDate
+            ? <span className="text-foreground">{formatStartDate(c.startDate)}</span>
+            : <span className="text-zinc-300">{"\u2014"}</span>}
+        </td>
         <td className="py-3 pr-4 text-sm font-mono text-right hidden lg:table-cell">{num(c.targeted)}</td>
         <td className="py-3 pr-4 text-sm font-mono text-right">{num(c.reached)}</td>
         <td className="py-3 pr-4 text-sm font-mono text-right hidden lg:table-cell">
@@ -202,7 +214,7 @@ function CampaignRow({ campaign }: { campaign: Campaign }) {
       {open && (
         <tr className="border-b border-border bg-zinc-50">
           <td></td>
-          <td colSpan={8} className="py-3 pr-6">
+          <td colSpan={9} className="py-3 pr-6">
             {c.details.length > 0 && (
               <div className="max-w-full lg:max-w-md mb-2">
                 {c.details.map((d) => (
@@ -454,7 +466,7 @@ function AddIdeaInput({ onAdd }: { onAdd: (p: ProposedExperiment) => void }) {
 
 export default function Home() {
   const [tab, setTab] = useState<Tab>("dashboard");
-  const [sortKey, setSortKey] = useState<SortKey | null>(null);
+  const [sortKey, setSortKey] = useState<SortKey | null>("startDate");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [proposals, setProposals] = useState(PROPOSED_EXPERIMENTS);
   const [statuses, setStatuses] = useState<Record<string, ProposalStatus>>({});
@@ -619,6 +631,7 @@ export default function Home() {
         if (seed && (stats.sent > 0 || stats.opened > 0 || stats.replied > 0)) {
           return {
             ...seed,
+            startDate: c.createdAt || seed.startDate,
             targeted: stats.sent,
             reached: stats.opened,
             replies: stats.replied,
@@ -628,7 +641,7 @@ export default function Home() {
             details,
           };
         }
-        if (seed) return seed;
+        if (seed) return { ...seed, startDate: c.createdAt || seed.startDate };
 
         const created = c.createdAt ? new Date(c.createdAt) : null;
         const dateRange = created
@@ -644,6 +657,7 @@ export default function Home() {
           motion: "sales" as const,
           status,
           dateRange,
+          startDate: c.createdAt || undefined,
           targeted: stats.sent,
           reached: stats.opened,
           replies: stats.replied,
@@ -678,6 +692,14 @@ export default function Home() {
       if (sortKey === "name") {
         const cmp = a.name.localeCompare(b.name);
         return sortDir === "asc" ? cmp : -cmp;
+      } else if (sortKey === "startDate") {
+        // Missing dates always sort to the bottom regardless of direction.
+        const aT = a.startDate ? new Date(a.startDate).getTime() : null;
+        const bT = b.startDate ? new Date(b.startDate).getTime() : null;
+        if (aT === null && bT === null) return 0;
+        if (aT === null) return 1;
+        if (bT === null) return -1;
+        return sortDir === "asc" ? aT - bT : bT - aT;
       } else if (sortKey === "confidence") {
         aVal = CONFIDENCE_ORDER[a.confidence];
         bVal = CONFIDENCE_ORDER[b.confidence];
@@ -704,6 +726,7 @@ export default function Home() {
 
   const columns: { key: SortKey; label: string; align: string; hideOnMobile?: boolean }[] = [
     { key: "name", label: "Campaign", align: "text-left" },
+    { key: "startDate", label: "Started", align: "text-right", hideOnMobile: true },
     { key: "targeted", label: "Targeted", align: "text-right", hideOnMobile: true },
     { key: "reached", label: "Reached", align: "text-right" },
     { key: "replies", label: "Replies", align: "text-right", hideOnMobile: true },
