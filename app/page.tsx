@@ -37,15 +37,22 @@ interface TamData {
   }[];
 }
 
-interface LemlistCampaign {
-  id: string;
-  name: string;
-  status: string;
+interface LemlistStats {
   sent: number;
   opened: number;
   clicked: number;
   replied: number;
   bounced: number;
+}
+
+interface LemlistCampaign {
+  id: string;
+  name: string;
+  status: string;
+  createdAt: string;
+  included: boolean;
+  seedId: string | null;
+  stats: LemlistStats | null;
 }
 
 type SortKey = "name" | "targeted" | "reached" | "replies" | "conversion" | "meetings" | "pmfScore" | "confidence";
@@ -490,11 +497,55 @@ export default function Home() {
   }, [persistState]);
   const [pipeline, setPipeline] = useState<PipelineData | null>(null);
   const [lemlistData, setLemlistData] = useState<LemlistCampaign[] | null>(null);
+  const [manageOpen, setManageOpen] = useState(false);
+  const [pendingIncluded, setPendingIncluded] = useState<Set<string> | null>(null);
+  const [savingIncluded, setSavingIncluded] = useState(false);
   const [tamData, setTamData] = useState<TamData | null>(null);
   const [defsOpen, setDefsOpen] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [apiStatus, setApiStatus] = useState<Record<string, "loading" | "done" | "error">>({});
   const [lastRefresh, setLastRefresh] = useState<string | null>(null);
+
+  const openManage = useCallback(() => {
+    if (!lemlistData) return;
+    setPendingIncluded(new Set(lemlistData.filter((c) => c.included).map((c) => c.id)));
+    setManageOpen(true);
+  }, [lemlistData]);
+
+  const cancelManage = useCallback(() => {
+    setPendingIncluded(null);
+    setManageOpen(false);
+  }, []);
+
+  const togglePending = useCallback((id: string) => {
+    setPendingIncluded((prev) => {
+      if (!prev) return prev;
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }, []);
+
+  const saveManage = useCallback(async () => {
+    if (!pendingIncluded) return;
+    setSavingIncluded(true);
+    try {
+      const ids = Array.from(pendingIncluded);
+      await fetch("/api/lemlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ included: ids }),
+      });
+      const res = await fetch("/api/lemlist");
+      const data = await res.json();
+      setLemlistData(data.campaigns || []);
+      setManageOpen(false);
+      setPendingIncluded(null);
+    } finally {
+      setSavingIncluded(false);
+    }
+  }, [pendingIncluded]);
 
   const refreshAll = useCallback(() => {
     setRefreshing(true);
@@ -534,37 +585,80 @@ export default function Home() {
     refreshAll();
   }, [refreshAll]);
 
-  // Merge live Lemlist data into campaigns
+  // Merge live Lemlist data into campaigns. Non-Lemlist seed entries always
+  // pass through. Lemlist rows come exclusively from the live/snapshot data:
+  // an included campaign with a matching seed inherits the curated framing,
+  // anything else gets synthesized from raw stats. Toggling a campaign off
+  // hides it from the dashboard entirely.
   const campaignsWithLive = useMemo(() => {
     if (!lemlistData) return CAMPAIGNS;
-    const lemlistMap: Record<string, LemlistCampaign> = {
-      "lemlist-danny": lemlistData.find((c) => c.id === "cam_BNmQsFaGTLY3yXkXF")!,
-      "lemlist-kyla": lemlistData.find((c) => c.id === "cam_mu9WWo7NqjpwXubWh")!,
-      "lemlist-scott-interview": lemlistData.find((c) => c.id === "cam_G222d33RL99aTLGto")!,
-      "lemlist-launch": lemlistData.find((c) => c.id === "cam_JL7ZR82ZcPauxQM5W")!,
-    };
-    return CAMPAIGNS.map((camp) => {
-      const live = lemlistMap[camp.id];
-      if (!live || (live.sent === 0 && live.opened === 0 && live.replied === 0)) return camp;
-      const openRate = live.sent > 0 ? `${Math.round((live.opened / live.sent) * 100)}%` : "0%";
-      const replyRate = live.sent > 0 ? `${((live.replied / live.sent) * 100).toFixed(1)}%` : "0%";
-      return {
-        ...camp,
-        targeted: live.sent,
-        reached: live.opened,
-        replies: live.replied,
-        conversion: replyRate,
-        confidence: "high" as const,
-        confidenceNote: "Live data from Lemlist API.",
-        details: [
-          { label: "Emails sent", value: live.sent },
-          { label: "Opened", value: live.opened, rate: openRate },
-          { label: "Replied", value: live.replied, rate: replyRate },
-          { label: "Clicked", value: live.clicked },
-          { label: "Bounced", value: live.bounced },
-        ],
-      };
-    });
+
+    const nonLemlistSeed = CAMPAIGNS.filter((c) => !c.id.startsWith("lemlist-"));
+    const seedById = Object.fromEntries(
+      CAMPAIGNS.filter((c) => c.id.startsWith("lemlist-")).map((c) => [c.id, c])
+    );
+
+    const lemlistRows: Campaign[] = lemlistData
+      .filter((c) => c.included && c.stats)
+      .map((c) => {
+        const stats = c.stats!;
+        const openRate = stats.sent > 0
+          ? `${Math.round((stats.opened / stats.sent) * 100)}%`
+          : "0%";
+        const replyRate = stats.sent > 0
+          ? `${((stats.replied / stats.sent) * 100).toFixed(1)}%`
+          : "0%";
+        const details = [
+          { label: "Emails sent", value: stats.sent },
+          { label: "Opened", value: stats.opened, rate: openRate },
+          { label: "Replied", value: stats.replied, rate: replyRate },
+          { label: "Clicked", value: stats.clicked },
+          { label: "Bounced", value: stats.bounced },
+        ];
+        const seed = c.seedId ? seedById[c.seedId] : null;
+        if (seed && (stats.sent > 0 || stats.opened > 0 || stats.replied > 0)) {
+          return {
+            ...seed,
+            targeted: stats.sent,
+            reached: stats.opened,
+            replies: stats.replied,
+            conversion: replyRate,
+            confidence: "high" as const,
+            confidenceNote: "Live data from Lemlist API.",
+            details,
+          };
+        }
+        if (seed) return seed;
+
+        const created = c.createdAt ? new Date(c.createdAt) : null;
+        const dateRange = created
+          ? `${created.toLocaleString("en-US", { month: "short", day: "numeric" })} — present`
+          : "";
+        const status: Campaign["status"] =
+          c.status === "running" ? "active" : c.status === "paused" ? "paused" : "planned";
+        return {
+          id: `lemlist-${c.id}`,
+          name: `Lemlist — ${c.name}`,
+          channel: "Lemlist",
+          mode: "Email",
+          motion: "sales" as const,
+          status,
+          dateRange,
+          targeted: stats.sent,
+          reached: stats.opened,
+          replies: stats.replied,
+          conversion: replyRate,
+          meetings: 0,
+          pmfScore: null,
+          pmfNote: "Auto-discovered campaign — add a hand-curated entry in seed-data.ts to score PMF.",
+          confidence: "high" as const,
+          confidenceNote: "Live data from Lemlist API.",
+          details,
+          notes: "",
+        };
+      });
+
+    return [...nonLemlistSeed, ...lemlistRows];
   }, [lemlistData]);
 
   const handleSort = (key: SortKey) => {
@@ -792,6 +886,84 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          {/* Lemlist sync */}
+          {lemlistData && (
+            <div className="max-w-6xl mx-auto px-4 lg:px-6 mb-3">
+              <div className="border border-border rounded-lg px-3 py-2 flex items-center justify-between gap-3 text-xs">
+                <div className="text-muted">
+                  <span className="text-foreground font-medium">Lemlist sync</span>
+                  {" · "}
+                  tracking {lemlistData.filter((c) => c.included).length} of {lemlistData.length} campaigns since Feb 1, 2026
+                </div>
+                {!manageOpen ? (
+                  <button
+                    onClick={openManage}
+                    className="px-2.5 py-1 rounded-md border border-border text-muted hover:text-foreground hover:border-zinc-400 transition-colors"
+                  >
+                    Manage ▸
+                  </button>
+                ) : (
+                  <div className="flex items-center gap-1.5">
+                    <button
+                      onClick={cancelManage}
+                      disabled={savingIncluded}
+                      className="px-2.5 py-1 rounded-md border border-border text-muted hover:text-foreground hover:border-zinc-400 transition-colors disabled:opacity-50"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={saveManage}
+                      disabled={savingIncluded}
+                      className="px-2.5 py-1 rounded-md bg-accent text-white hover:bg-accent-light transition-colors disabled:opacity-50"
+                    >
+                      {savingIncluded ? "Saving…" : "Save"}
+                    </button>
+                  </div>
+                )}
+              </div>
+              {manageOpen && pendingIncluded && (
+                <div className="border border-border border-t-0 rounded-b-lg max-h-72 overflow-y-auto">
+                  <p className="text-xs text-muted px-3 py-2 border-b border-border bg-zinc-50">
+                    Tick a campaign to include it on the dashboard. Newly discovered campaigns default to off.
+                  </p>
+                  <ul>
+                    {lemlistData.map((c) => {
+                      const created = c.createdAt ? new Date(c.createdAt) : null;
+                      const dateLabel = created
+                        ? created.toLocaleString("en-US", { month: "short", day: "numeric" })
+                        : "—";
+                      const checked = pendingIncluded.has(c.id);
+                      return (
+                        <li
+                          key={c.id}
+                          className="flex items-center gap-3 px-3 py-1.5 border-b border-border last:border-0 hover:bg-zinc-50 cursor-pointer"
+                          onClick={() => togglePending(c.id)}
+                        >
+                          <input
+                            type="checkbox"
+                            checked={checked}
+                            onChange={() => togglePending(c.id)}
+                            onClick={(e) => e.stopPropagation()}
+                            className="cursor-pointer"
+                          />
+                          <span className="flex-1 text-xs text-foreground truncate">{c.name}</span>
+                          <span className={`text-[10px] uppercase tracking-wider ${
+                            c.status === "running" ? "text-emerald-600" :
+                            c.status === "paused" ? "text-amber-600" :
+                            c.status === "ended" ? "text-zinc-400" : "text-muted"
+                          }`}>
+                            {c.status}
+                          </span>
+                          <span className="text-[10px] text-zinc-400 w-12 text-right">{dateLabel}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Dashboard table */}
           <div className="max-w-6xl mx-auto px-4 lg:px-6 pb-12">

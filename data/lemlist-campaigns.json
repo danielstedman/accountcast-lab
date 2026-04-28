@@ -1,28 +1,75 @@
 [
   {
-    "id": "cam_BNmQsFaGTLY3yXkXF",
-    "name": "AccountCast (Danny)",
-    "status": "running",
-    "sent": 178,
+    "id": "cam_hsYudmMwvFDJKH8no",
+    "name": "Frannie list",
+    "status": "ended",
+    "createdAt": "2026-02-18T17:31:55.595Z",
+    "sent": 53,
+    "opened": 152,
+    "clicked": 0,
+    "replied": 7,
+    "bounced": 1
+  },
+  {
+    "id": "cam_3qcaTJiS5fXJHudPe",
+    "name": "Trash",
+    "status": "paused",
+    "createdAt": "2026-02-25T18:53:04.206Z",
+    "sent": 0,
     "opened": 0,
     "clicked": 0,
     "replied": 0,
-    "bounced": 3
+    "bounced": 0
   },
   {
-    "id": "cam_mu9WWo7NqjpwXubWh",
-    "name": "Tier 1 AccountCast (Kyla)",
-    "status": "running",
-    "sent": 65,
-    "opened": 42,
+    "id": "cam_caPubsYQp7mhRoqmv",
+    "name": "uCTV Launch",
+    "status": "paused",
+    "createdAt": "2026-02-26T02:12:39.942Z",
+    "sent": 0,
+    "opened": 0,
     "clicked": 0,
     "replied": 0,
-    "bounced": 3
+    "bounced": 0
+  },
+  {
+    "id": "cam_QwAjMpAisr87w2MTR",
+    "name": "Saturnalia Cannes Invite – June 2026",
+    "status": "running",
+    "createdAt": "2026-02-27T20:23:33.436Z",
+    "sent": 588,
+    "opened": 587,
+    "clicked": 0,
+    "replied": 41,
+    "bounced": 22
+  },
+  {
+    "id": "cam_weM4KBRkDuWwSkaQZ",
+    "name": "Danny's campaign (1)",
+    "status": "draft",
+    "createdAt": "2026-03-02T19:18:18.728Z",
+    "sent": 0,
+    "opened": 0,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 0
+  },
+  {
+    "id": "cam_JL7ZR82ZcPauxQM5W",
+    "name": "AccountCastLaunch",
+    "status": "ended",
+    "createdAt": "2026-03-19T15:54:40.212Z",
+    "sent": 433,
+    "opened": 359,
+    "clicked": 0,
+    "replied": 49,
+    "bounced": 10
   },
   {
     "id": "cam_G222d33RL99aTLGto",
     "name": "Scott's Customer Interview Push",
     "status": "running",
+    "createdAt": "2026-03-25T14:35:02.804Z",
     "sent": 87,
     "opened": 35,
     "clicked": 0,
@@ -30,13 +77,146 @@
     "bounced": 0
   },
   {
-    "id": "cam_JL7ZR82ZcPauxQM5W",
-    "name": "AccountCast Launch",
-    "status": "ended",
-    "sent": 432,
-    "opened": 327,
+    "id": "cam_mu9WWo7NqjpwXubWh",
+    "name": "Tier1 Mar31 SeqA KM",
+    "status": "running",
+    "createdAt": "2026-03-31T14:41:59.665Z",
+    "sent": 95,
+    "opened": 52,
     "clicked": 0,
-    "replied": 33,
-    "bounced": 10
+    "replied": 0,
+    "bounced": 3
+  },
+  {
+    "id": "cam_BNmQsFaGTLY3yXkXF",
+    "name": "AccountCast (Danny)",
+    "status": "paused",
+    "createdAt": "2026-03-31T15:57:57.514Z",
+    "sent": 178,
+    "opened": 0,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 3
+  },
+  {
+    "id": "cam_cSTEy7dhwpALAkqxu",
+    "name": "Scott's campaign (10)",
+    "status": "draft",
+    "createdAt": "2026-03-31T16:40:24.859Z",
+    "sent": 0,
+    "opened": 0,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 0
+  },
+  {
+    "id": "cam_AKtJYYhbvkFHgqi6F",
+    "name": "Lobby (2023) emails",
+    "status": "paused",
+    "createdAt": "2026-04-01T18:24:44.808Z",
+    "sent": 19,
+    "opened": 0,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 1
+  },
+  {
+    "id": "cam_PF67yTgywguCcSxce",
+    "name": "Danny ASUGSV",
+    "status": "paused",
+    "createdAt": "2026-04-09T19:58:30.228Z",
+    "sent": 146,
+    "opened": 32,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 45
+  },
+  {
+    "id": "cam_n2L4SLjS6buStTR8D",
+    "name": "Danny's campaign (2)",
+    "status": "draft",
+    "createdAt": "2026-04-10T14:48:50.436Z",
+    "sent": 0,
+    "opened": 0,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 0
+  },
+  {
+    "id": "cam_7hf6fLoSvRzJw5joA",
+    "name": "Dripify VPs Demand Gen",
+    "status": "ended",
+    "createdAt": "2026-04-10T19:10:28.701Z",
+    "sent": 27,
+    "opened": 16,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 0
+  },
+  {
+    "id": "cam_6doAkRNxHY3zonPWw",
+    "name": "SequenceC Apr20 w/ Lead Magnet",
+    "status": "running",
+    "createdAt": "2026-04-10T20:23:48.133Z",
+    "sent": 78,
+    "opened": 32,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 1
+  },
+  {
+    "id": "cam_aPqvDiyR7AT8LQBoh",
+    "name": "Imaginarium Summit 2026 Followup Email",
+    "status": "running",
+    "createdAt": "2026-04-12T19:18:34.652Z",
+    "sent": 42,
+    "opened": 121,
+    "clicked": 0,
+    "replied": 13,
+    "bounced": 0
+  },
+  {
+    "id": "cam_yZyK8MwunP3GbQqpc",
+    "name": "EdTech (TIMA)",
+    "status": "running",
+    "createdAt": "2026-04-13T20:06:57.688Z",
+    "sent": 34,
+    "opened": 11,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 0
+  },
+  {
+    "id": "cam_j7R6xan2AxZeQQJqu",
+    "name": "Danny's campaign (4)",
+    "status": "draft",
+    "createdAt": "2026-04-14T14:30:41.731Z",
+    "sent": 0,
+    "opened": 0,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 0
+  },
+  {
+    "id": "cam_xZXfDhzmonD4nRzEM",
+    "name": "AI - Danny’s Campaign",
+    "status": "draft",
+    "createdAt": "2026-04-14T18:20:09.180Z",
+    "sent": 0,
+    "opened": 0,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 0
+  },
+  {
+    "id": "cam_JPQsBYcKH9mpYnhxf",
+    "name": "Test CRM Pipedrive",
+    "status": "paused",
+    "createdAt": "2026-04-14T18:21:36.860Z",
+    "sent": 0,
+    "opened": 0,
+    "clicked": 0,
+    "replied": 0,
+    "bounced": 0
   }
 ]
